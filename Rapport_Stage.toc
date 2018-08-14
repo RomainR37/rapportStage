@@ -31,9 +31,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}D\IeC {\'e}veloppement}{11}{part.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Bilan du stage}{12}{chapter.7}
+\contentsline {chapter}{\numberline {7}title}{12}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{13}{part*.6}
+\contentsline {chapter}{\numberline {8}Bilan du stage}{13}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{14}{part*.6}
 \babel@toc {english}{}
 \babel@toc {french}{}
 \babel@toc {french}{}
