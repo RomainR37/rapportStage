@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  16 AUG 2018 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  21 AUG 2018 17:24
 entering extended mode
 **./Rapport_Stage.tex
 (Rapport_Stage.tex
@@ -3223,8 +3223,6 @@ Package pdftex.def Info: images/logoSopra.png  used on input line 25.
 \c@pagesLTS.double.roman=\count549
 \c@pagesLTS.current.local.roman=\count550
  (Rapport_Stage.toc
-Underfull \vbox (badness 1158) has occurred while \output is active []
-
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/jkpf/b/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3257,50 +3255,91 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ]
 Chapitre 1.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 52.
+.................................................
+<images/sopralogo.jpg, id=137, 189.1065pt x 58.2978pt>
+File: images/sopralogo.jpg Graphic file (type jpg)
+<use images/sopralogo.jpg>
+Package pdftex.def Info: images/sopralogo.jpg  used on input line 52.
+(pdftex.def)             Requested size: 189.10603pt x 58.29765pt.
+* Missing: images/sopralogo.pax
+
+LaTeX Warning: Polytech : Missing caption on figure on input line 53.
+
+
+LaTeX Warning: Polytech : Missing label on figure on input line 53.
+
 [4
 
-]
+ <./images/sopralogo.jpg>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 71.
+.................................................
+File: images/logoSopra.png Graphic file (type png)
+<use images/logoSopra.png>
+Package pdftex.def Info: images/logoSopra.png  used on input line 71.
+(pdftex.def)             Requested size: 143.03401pt x 34.62927pt.
+
+* Missing: images/logoSopra.pax
+
+LaTeX Warning: Polytech : Missing caption on figure on input line 72.
+
+
+LaTeX Warning: Polytech : Missing label on figure on input line 72.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 1.  Le groupe \T1/jkpf/b/it/12 So-pra Ste-ri
+a \T1/jkpf/b/sc/12 et \T1/jkpf/b/it/12 So-pra Ban-king Soft-ware
+ []
+
+[5]
 Chapitre 2.
-[5
+[6
 
 ]
 Chapitre 3.
-[6
+[7
 
-] [7
+] [8
 
 ]
 Chapitre 4.
-[8
-
-]
-Chapitre 5.
 [9
 
 ]
-Chapitre 6.
+Chapitre 5.
 [10
 
-] [11
+]
+Chapitre 6.
+[11
 
 ] [12
 
-]
-Chapitre 7.
-[13
+] [13
 
 ]
-Chapitre 8.
+Chapitre 7.
 [14
 
 ]
+Chapitre 8.
+[15
 
-Package biblatex Warning: Type 'online' not found on input line 78.
+]
+
+Package biblatex Warning: Type 'online' not found on input line 110.
 
 No file Rapport_Stage.gls.
 No file Rapport_Stage.acr.
 No file Rapport_Stage.ind.
-[15
+[16
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3337,15 +3376,15 @@ No file Rapport_Stage.ind.
 
 File: images/logoSopra.png Graphic file (type png)
 <use images/logoSopra.png>
-Package pdftex.def Info: images/logoSopra.png  used on input line 78.
+Package pdftex.def Info: images/logoSopra.png  used on input line 110.
 (pdftex.def)             Requested size: 143.03401pt x 34.62927pt.
- [16
+ [17
 
 
 ] 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 78.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 110.
 \c@pagesLTS.arabic.1.local.count=\count555
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3353,43 +3392,45 @@ AED: pageslts setting VeryLastPage via AfterLastShipout
 AED: pageslts setting LastPages via AfterLastShipout 
 
 
-Package pageslts Info: Total number of pages is even.
+Package pageslts Info: Total number of pages is odd.
 
 
 (Rapport_Stage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package logreq Info: Writing requests to 'Rapport_Stage.run.xml'.
 \openout1 = `Rapport_Stage.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 56275 strings out of 493305
- 1031444 string characters out of 3126757
+ 56410 strings out of 493305
+ 1033082 string characters out of 3126757
  1606971 words of memory out of 3000000
- 58667 multiletter control sequences out of 15000+200000
- 665789 words of font info for 242 fonts, out of 3000000 for 9000
+ 58712 multiletter control sequences out of 15000+200000
+ 700583 words of font info for 311 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,94p,1982b,2679s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/kpfo
 nts/kpfonts-expert.enc}{d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9
 /fonts/enc/dvips/base/8r.enc}<d:/Profiles/rrousseau/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><d:/Profiles/rrousseau/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbne.pfb><d:/Profiles/rrou
-sseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb
-><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kp
-fonts/jkpmi.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/kpfonts/jkpmit8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmite.pfb><d:/Profiles/rrousseau/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><d:/Profile
-s/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmne
-.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/kpfonts/jkpmsc8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Rapport_Stage.pdf (22 pages, 153632 bytes).
+eX 2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><d:/Profiles/rrousseau/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbite.pfb><d:/Profiles/rr
+ousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pf
+b><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/k
+pfonts/jkpbne.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/kpfonts/jkpbsc8a.pfb><d:/Profiles/rrousseau/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmi.pfb><d:/Profiles/rrousseau/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmit8a.pfb><d:/Profil
+es/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmi
+te.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/kpfonts/jkpmn8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/kpfonts/jkpmne.pfb><d:/Profiles/rrousseau/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><d:/Profiles/rroussea
+u/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on Rapport_Stage.pdf (23 pages, 212797 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 44732 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 47321 words of extra memory for PDF output out of 51595 (max. 10000000)
 
