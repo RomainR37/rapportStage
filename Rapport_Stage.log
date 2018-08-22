@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  21 AUG 2018 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  22 AUG 2018 17:09
 entering extended mode
 **./Rapport_Stage.tex
 (Rapport_Stage.tex
@@ -3334,7 +3334,7 @@ Chapitre 8.
 
 ]
 
-Package biblatex Warning: Type 'online' not found on input line 110.
+Package biblatex Warning: Type 'online' not found on input line 117.
 
 No file Rapport_Stage.gls.
 No file Rapport_Stage.acr.
@@ -3376,15 +3376,15 @@ No file Rapport_Stage.ind.
 
 File: images/logoSopra.png Graphic file (type png)
 <use images/logoSopra.png>
-Package pdftex.def Info: images/logoSopra.png  used on input line 110.
+Package pdftex.def Info: images/logoSopra.png  used on input line 117.
 (pdftex.def)             Requested size: 143.03401pt x 34.62927pt.
  [17
 
 
 ] 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 110.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 117.
 \c@pagesLTS.arabic.1.local.count=\count555
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3396,19 +3396,19 @@ Package pageslts Info: Total number of pages is odd.
 
 
 (Rapport_Stage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
 Package logreq Info: Writing requests to 'Rapport_Stage.run.xml'.
 \openout1 = `Rapport_Stage.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
  ) 
 Here is how much of TeX's memory you used:
- 56410 strings out of 493305
- 1033082 string characters out of 3126757
- 1606971 words of memory out of 3000000
+ 56430 strings out of 493305
+ 1033283 string characters out of 3126757
+ 1607971 words of memory out of 3000000
  58712 multiletter control sequences out of 15000+200000
- 700583 words of font info for 311 fonts, out of 3000000 for 9000
+ 702761 words of font info for 326 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,94p,1982b,2679s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/kpfo
@@ -3428,7 +3428,7 @@ lic/kpfonts/jkpmn8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/kpfonts/jkpmne.pfb><d:/Profiles/rrousseau/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><d:/Profiles/rroussea
 u/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Rapport_Stage.pdf (23 pages, 212797 bytes).
+Output written on Rapport_Stage.pdf (23 pages, 214574 bytes).
 PDF statistics:
  325 PDF objects out of 1000 (max. 8388607)
  49 named destinations out of 1000 (max. 500000)
