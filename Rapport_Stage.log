@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  22 AUG 2018 17:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  23 AUG 2018 17:30
 entering extended mode
 **./Rapport_Stage.tex
 (Rapport_Stage.tex
@@ -3238,7 +3238,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 Table des ma-tières
  []
 
-[2]
+[2] (Rapport_Stage.lof)
+\tf@lof=\write14
+\openout14 = `Rapport_Stage.lof'.
+
+ [3
+
+]
 \c@pagesLTS.roman.1.local.count=\count551
 \c@pagesLTS.pnc.arabic=\count552
 \c@pagesLTS.double.arabic=\count553
@@ -3260,7 +3266,7 @@ Chapitre 1.
 . 
 . Redefining command \caption with sig. 'om' on line 52.
 .................................................
-<images/sopralogo.jpg, id=137, 189.1065pt x 58.2978pt>
+<images/sopralogo.jpg, id=157, 189.1065pt x 58.2978pt>
 File: images/sopralogo.jpg Graphic file (type jpg)
 <use images/sopralogo.jpg>
 Package pdftex.def Info: images/sopralogo.jpg  used on input line 52.
@@ -3310,17 +3316,31 @@ Chapitre 3.
 
 ]
 Chapitre 4.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 136.
+.................................................
+<images/springInitializr.png, id=182, 880.79062pt x 376.40625pt>
+File: images/springInitializr.png Graphic file (type png)
+<use images/springInitializr.png>
+Package pdftex.def Info: images/springInitializr.png  used on input line 136.
+(pdftex.def)             Requested size: 440.39423pt x 188.20265pt.
+* Missing: images/springInitializr.pax
 [9
 
 ]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[10 <./images/springInitializr.png>]
 Chapitre 5.
-[10
+[11
 
 ]
 Chapitre 6.
-[11
-
-] [12
+[12
 
 ] [13
 
@@ -3328,18 +3348,24 @@ Chapitre 6.
 Chapitre 7.
 [14
 
+] [15
+
 ]
 Chapitre 8.
-[15
+[16
+
+]
+Chapitre 9.
+[17
 
 ]
 
-Package biblatex Warning: Type 'online' not found on input line 117.
+Package biblatex Warning: Type 'online' not found on input line 173.
 
 No file Rapport_Stage.gls.
 No file Rapport_Stage.acr.
 No file Rapport_Stage.ind.
-[16
+[18
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3376,15 +3402,15 @@ No file Rapport_Stage.ind.
 
 File: images/logoSopra.png Graphic file (type png)
 <use images/logoSopra.png>
-Package pdftex.def Info: images/logoSopra.png  used on input line 117.
+Package pdftex.def Info: images/logoSopra.png  used on input line 173.
 (pdftex.def)             Requested size: 143.03401pt x 34.62927pt.
- [17
+ [19
 
 
 ] 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 117.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 173.
 \c@pagesLTS.arabic.1.local.count=\count555
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3392,25 +3418,25 @@ AED: pageslts setting VeryLastPage via AfterLastShipout
 AED: pageslts setting LastPages via AfterLastShipout 
 
 
-Package pageslts Info: Total number of pages is odd.
+Package pageslts Info: Total number of pages is even.
 
 
 (Rapport_Stage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package logreq Info: Writing requests to 'Rapport_Stage.run.xml'.
 \openout1 = `Rapport_Stage.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 56430 strings out of 493305
- 1033283 string characters out of 3126757
- 1607971 words of memory out of 3000000
- 58712 multiletter control sequences out of 15000+200000
- 702761 words of font info for 326 fonts, out of 3000000 for 9000
+ 56514 strings out of 493305
+ 1034411 string characters out of 3126757
+ 1608064 words of memory out of 3000000
+ 58739 multiletter control sequences out of 15000+200000
+ 712133 words of font info for 356 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,94p,1982b,2679s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,16n,94p,1982b,2741s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/kpfo
 nts/kpfonts-expert.enc}{d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9
 /fonts/enc/dvips/base/8r.enc}<d:/Profiles/rrousseau/AppData/Local/Programs/MiKT
@@ -3428,9 +3454,9 @@ lic/kpfonts/jkpmn8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/kpfonts/jkpmne.pfb><d:/Profiles/rrousseau/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><d:/Profiles/rroussea
 u/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Rapport_Stage.pdf (23 pages, 214574 bytes).
+Output written on Rapport_Stage.pdf (26 pages, 267066 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 47321 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 53526 words of extra memory for PDF output out of 61914 (max. 10000000)
 

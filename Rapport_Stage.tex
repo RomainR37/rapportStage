@@ -78,29 +78,85 @@ Ses solutions accompagnent près de 800 banques dans 70 pays. Son objectif est d
 
 \chapter{Le progiciel Amplitude}
 
-Le progiciel a été développé au sein de Delta avant son acquisition par \textit{Sopra}. 
+\section{Présentation}
 
-Sopra Banking Amplitude est la solution core banking permettant de traiter de manière intégrée toutes les problématiques bancaires et de relever les défis du digital, de la réglementation pour répondre aux attentes clients sur un marché en forte évolution. Nous vous aidons à accompagner ces changements et à en saisir toutes les opportunités.
+\textit{Amplitude}, de son nom complet \textit{Sopra Banking Amplitude}, est la solution de \textit{core banking} proposé par \textit{Sopra Banking Software} pour traiter de manière intégrée toutes les problématiques bancaires. Le progiciel a été développé au sein du groupe \textit{Delta Informatique} avant son acquisition par \textit{Sopra}. \textit{Amplitude} est adoptée par 200 banques dans 50 pays et s’adresse à tous types d’institutions financières, de la banque en création aux grands groupes.
 
-Sopra Banking Amplitude est adoptée avec succès par 200 banques dans 50 pays et s’adresse à tous types d’institutions financières, de la banque en création aux grands groupes.
+Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve: 
+
+\begin{itemize}
+	\item Une large couverture avec plus de 80 modules métiers
+	\item Un système entièrement digital ready et sécurisé
+	\item Une solution évolutive et agile
+	\item Une architecture orientée client et process	
+\end{itemize}
+
+
+\section{Architecture générale}
+
+
+Branche d'Amplitude
+
+
+Arborescence
 
 
 \chapter{Présentation du projet}
+
+Cartographie / Expression des besoins
 
 
 \part{Tutoriels et formations}
 
 
-\chapter{Maven}
+Cette partie sera consacrée aux différents tutoriels et formations que j'ai effectué lors des premières semaines de stage (approximativement les 3 semaines du mois d'Avril). Après avoir pris connaissance du sujet et des locaux, une phase de mise à niveau sur les outils que nous allions utiliser s'imposait. Le principe était de réaliser des tutoriels préconisés par mon encadrant (tutoriels internes à \textit{Sopra} ou sur Internet) et de réaliser des comptes-rendus (ou \textit{Proof of Concept}) sur les outils observés pour que les personnes souhaitant s'intéresser au sujet puissent avoir un support disponible. Les formations étaient portées sur trois technologies principales : \textit{Spring Boot}, \textit{Spring Data} et \textit{Angular}. Ces technologies seront détaillées dans cette partie.
 
 
-\chapter{Spring Boot et Spring Data}
+\chapter{Spring Boot}
+
+\textit{Spring Boot} a pour but de faciliter la création d'application utilisant \textit{Spring} en automatisant ses configurations. \textit{Spring Boot} permet par ailleurs de créer pour un projet, un exécutable unique contenant toutes les dépendances nécessaires. Les objectifs annoncés par la documentation de \textit{Spring Boot} sont les suivants : 
+
+\begin{itemize}
+	\item Proposer des solutions rapides et accessibles pour les développements \textit{Spring} ;
+	\item Faciliter les configurations, même lorsque les paramètres souhaités diffèrent de ceux utilisés par défaut ;
+	\item Proposer une panoplie d'options non-fonctionnelles (comme des serveurs embarqués \textit{Tomcat}, des options de sécurité, de mesures de performances, etc.) ;
+	\item Aucune génération de code ni de configuration XML. 
+\end{itemize}
+
+\textit{Spring Boot} ne génère pas de code ni ne modifie les fichiers du projet. Au démarrage de l'application, \textit{Spring Boot} va dynamiquement « brancher » les composants et les configurations nécessaires au contexte du projet. Les deux principales modifications à opérer pour faire fonctionner \textit{Spring Boot} se passent sur le fichier \textit{Maven} et au travers d’annotations du framework \textit{Spring} sur les composants en action. Le détail du fonctionnement sera détaillé dans les prochaines sections. 
+
+\textit{Spring Boot} fonctionne avec les versions Java 1.8 et supérieur. Les différentes versions des composants utilisés par \textit{Spring Boot} sont détaillés dans le guide de référence à l’adresse suivante : \url{https://docs.spring.io/spring-boot/docs/2.0.1.RELEASE/reference/htmlsingle/}.
+
+
+\section{Création d'un projet avec \textit{Spring Initializr}}
+
+Il est possible de générer un projet \textit{Spring Boot} avec toutes les dépendances que l’on souhaite \textit{Spring Initializr} à l’adresse : \url{https://start.spring.io/}. Un aperçu du site est visible sur la \autoref{fig:initializr}.
+
+\begin{figure}
+	\includegraphics[scale=0.5]{images/springInitializr}
+	\caption{Aperçu du site \textit{Spring Initializr}}
+	\label{fig:initializr}
+\end{figure}
+
+Il suffit d’indiquer les propriétés du projet et les dépendances que l’on souhait ajouter et un modèle de projet \textit{Spring Boot} sera disponible au téléchargement. Les détails et le fonctionnement du fichier \textit{pom.xml} généré sont détaillés dans la prochaine section. 
+
+La création d'un projet par ce biais n'est pas obligatoire, cependant dans les cas où l'on connaît par avance les principales dépendances de notre projet, cela s'avère être un gain de temps non négligeable. Le projet généré est sous forme de dossier compressé \textit{.zip} contenant la structure du projet, le fichier de construction du projet \textit{pom.xml} de \textit{Maven} avec toutes les dépendances, et les classes principales. 
+
+
+\section{Utilisation avec \textit{Maven}}
+
+\section{title}
+
+\chapter{Spring Data}
 
 
 \chapter{Angular}
 
 
 \part{Modélisation de l'outil et chiffrage du projet}
+
+
+\chapter{Modélisation UML}
 
 
 \part{Développement}
