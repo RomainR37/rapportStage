@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  23 AUG 2018 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.11)  24 AUG 2018 17:13
 entering extended mode
 **./Rapport_Stage.tex
 (Rapport_Stage.tex
@@ -3266,7 +3266,7 @@ Chapitre 1.
 . 
 . Redefining command \caption with sig. 'om' on line 52.
 .................................................
-<images/sopralogo.jpg, id=157, 189.1065pt x 58.2978pt>
+<images/sopralogo.jpg, id=231, 189.1065pt x 58.2978pt>
 File: images/sopralogo.jpg Graphic file (type jpg)
 <use images/sopralogo.jpg>
 Package pdftex.def Info: images/sopralogo.jpg  used on input line 52.
@@ -3319,53 +3319,355 @@ Chapitre 4.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \caption with sig. 'om' on line 136.
+. Redefining command \caption with sig. 'om' on line 140.
 .................................................
-<images/springInitializr.png, id=182, 880.79062pt x 376.40625pt>
+<images/springInitializr.png, id=258, 880.79062pt x 376.40625pt>
 File: images/springInitializr.png Graphic file (type png)
 <use images/springInitializr.png>
-Package pdftex.def Info: images/springInitializr.png  used on input line 136.
+Package pdftex.def Info: images/springInitializr.png  used on input line 140.
 (pdftex.def)             Requested size: 440.39423pt x 188.20265pt.
 * Missing: images/springInitializr.pax
 [9
 
 ]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 157.
+.................................................
+<images/parentSpringBoot.png, id=263, 378.66469pt x 72.27pt>
+File: images/parentSpringBoot.png Graphic file (type png)
+<use images/parentSpringBoot.png>
+Package pdftex.def Info: images/parentSpringBoot.png  used on input line 157.
+(pdftex.def)             Requested size: 283.99782pt x 54.20235pt.
+
+* Missing: images/parentSpringBoot.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 165.
+.................................................
+<images/dependencySpringBoot.png, id=264, 389.95688pt x 109.91063pt>
+File: images/dependencySpringBoot.png Graphic file (type png)
+<use images/dependencySpringBoot.png>
+Package pdftex.def Info: images/dependencySpringBoot.png  used on input line 16
+5.
+(pdftex.def)             Requested size: 292.46693pt x 82.43275pt.
+* Missing: images/dependencySpringBoot.pax
+
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
  []
 
-[10 <./images/springInitializr.png>]
+[10 <./images/springInitializr.png> <./images/parentSpringBoot.png> <./images/d
+ependencySpringBoot.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 188.
+.................................................
+<images/buildSpringBoot.png, id=271, 447.92343pt x 143.03438pt>
+File: images/buildSpringBoot.png Graphic file (type png)
+<use images/buildSpringBoot.png>
+Package pdftex.def Info: images/buildSpringBoot.png  used on input line 188.
+(pdftex.def)             Requested size: 335.94174pt x 107.2755pt.
+
+* Missing: images/buildSpringBoot.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 212.
+.................................................
+<images/mainSpringBoot.png, id=273, 326.72063pt x 103.13531pt>
+File: images/mainSpringBoot.png Graphic file (type png)
+<use images/mainSpringBoot.png>
+Package pdftex.def Info: images/mainSpringBoot.png  used on input line 212.
+(pdftex.def)             Requested size: 326.71982pt x 103.13504pt.
+* Missing: images/mainSpringBoot.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[11 <./images/buildSpringBoot.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 220.
+.................................................
+<images/multipleMain.png, id=280, 480.29437pt x 158.84344pt>
+File: images/multipleMain.png Graphic file (type png)
+<use images/multipleMain.png>
+Package pdftex.def Info: images/multipleMain.png  used on input line 220.
+(pdftex.def)             Requested size: 384.23601pt x 127.07492pt.
+
+* Missing: images/multipleMain.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 234.
+.................................................
+<images/webBuildSpringBoot.png, id=282, 432.86719pt x 216.05719pt>
+File: images/webBuildSpringBoot.png Graphic file (type png)
+<use images/webBuildSpringBoot.png>
+Package pdftex.def Info: images/webBuildSpringBoot.png  used on input line 234.
+
+(pdftex.def)             Requested size: 346.2942pt x 172.84596pt.
+* Missing: images/webBuildSpringBoot.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[12 <./images/mainSpringBoot.png> <./images/multipleMain.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 258.
+.................................................
+<images/bddPom.png, id=292, 368.87813pt x 428.35031pt>
+File: images/bddPom.png Graphic file (type png)
+<use images/bddPom.png>
+Package pdftex.def Info: images/bddPom.png  used on input line 258.
+(pdftex.def)             Requested size: 276.6579pt x 321.26193pt.
+
+* Missing: images/bddPom.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 266.
+.................................................
+<images/bddProperties.png, id=294, 429.10312pt x 218.31563pt>
+File: images/bddProperties.png Graphic file (type png)
+<use images/bddProperties.png>
+Package pdftex.def Info: images/bddProperties.png  used on input line 266.
+(pdftex.def)             Requested size: 343.28296pt x 174.65273pt.
+* Missing: images/bddProperties.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[13 <./images/webBuildSpringBoot.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[14 <./images/bddPom.png> <./images/bddProperties.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 295.
+.................................................
+<images/pomParent.png, id=306, 703.87968pt x 289.83281pt>
+File: images/pomParent.png Graphic file (type png)
+<use images/pomParent.png>
+Package pdftex.def Info: images/pomParent.png  used on input line 295.
+(pdftex.def)             Requested size: 422.33107pt x 173.90102pt.
+
+* Missing: images/pomParent.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[15 <./images/pomParent.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 4.  Spring Boot
+ []
+
+[16]
 Chapitre 5.
-[11
-
-]
-Chapitre 6.
-[12
-
-] [13
-
-]
-Chapitre 7.
-[14
-
-] [15
-
-]
-Chapitre 8.
-[16
-
-]
-Chapitre 9.
 [17
 
 ]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 337.
+.................................................
+<images/repositorySpringData.png, id=324, 581.17125pt x 62.48344pt>
+File: images/repositorySpringData.png Graphic file (type png)
+<use images/repositorySpringData.png>
+Package pdftex.def Info: images/repositorySpringData.png  used on input line 33
+7.
+(pdftex.def)             Requested size: 464.93764pt x 49.9868pt.
 
-Package biblatex Warning: Type 'online' not found on input line 173.
+* Missing: images/repositorySpringData.pax
+
+Overfull \hbox (9.69353pt too wide) in paragraph at lines 337--340
+ [][] |
+ []
+
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 345.
+.................................................
+File: images/repositorySpringData.png Graphic file (type png)
+<use images/repositorySpringData.png>
+Package pdftex.def Info: images/repositorySpringData.png  used on input line 34
+5.
+(pdftex.def)             Requested size: 464.93764pt x 49.9868pt.
+* Missing: images/repositorySpringData.pax
+
+Overfull \hbox (9.69353pt too wide) in paragraph at lines 345--348
+ [][] |
+ []
+
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 353.
+.................................................
+<images/queryModifying.png, id=326, 486.31688pt x 48.93282pt>
+File: images/queryModifying.png Graphic file (type png)
+<use images/queryModifying.png>
+Package pdftex.def Info: images/queryModifying.png  used on input line 353.
+(pdftex.def)             Requested size: 413.37129pt x 41.59306pt.
+* Missing: images/queryModifying.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 5.  Spring Data
+ []
+
+[18 <./images/repositorySpringData.png> <./images/queryModifying.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 380.
+.................................................
+<images/repositoryRESTResource.png, id=335, 575.14874pt x 89.58469pt>
+File: images/repositoryRESTResource.png Graphic file (type png)
+<use images/repositoryRESTResource.png>
+Package pdftex.def Info: images/repositoryRESTResource.png  used on input line 
+380.
+(pdftex.def)             Requested size: 488.87874pt x 76.14732pt.
+
+* Missing: images/repositoryRESTResource.pax
+
+Overfull \hbox (33.63463pt too wide) in paragraph at lines 380--383
+ [][] |
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 5.  Spring Data
+ []
+
+[19 <./images/repositoryRESTResource.png>]
+Chapitre 6.
+[20
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 6.  An-gu-lar
+ []
+
+[21]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 437.
+.................................................
+<images/arborescenceSrc.png, id=355, 335.75438pt x 475.7775pt>
+File: images/arborescenceSrc.png Graphic file (type png)
+<use images/arborescenceSrc.png>
+Package pdftex.def Info: images/arborescenceSrc.png  used on input line 437.
+(pdftex.def)             Requested size: 285.39256pt x 404.41277pt.
+
+* Missing: images/arborescenceSrc.pax
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 6.  An-gu-lar
+ []
+
+[22 <./images/arborescenceSrc.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 452.
+.................................................
+<images/styles_angular-cli.png, id=364, 434.37282pt x 102.3825pt>
+File: images/styles_angular-cli.png Graphic file (type png)
+<use images/styles_angular-cli.png>
+Package pdftex.def Info: images/styles_angular-cli.png  used on input line 452.
+
+(pdftex.def)             Requested size: 369.21863pt x 87.02553pt.
+
+* Missing: images/styles_angular-cli.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 464.
+.................................................
+<images/bootstrap_exemple.png, id=365, 717.43031pt x 320.69812pt>
+File: images/bootstrap_exemple.png Graphic file (type png)
+<use images/bootstrap_exemple.png>
+Package pdftex.def Info: images/bootstrap_exemple.png  used on input line 464.
+(pdftex.def)             Requested size: 430.4615pt x 192.42035pt.
+* Missing: images/bootstrap_exemple.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 6.  An-gu-lar
+ []
+
+[23 <./images/styles_angular-cli.png> <./images/bootstrap_exemple.png>]
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 478.
+.................................................
+<images/styles_primeng.png, id=375, 435.12563pt x 74.52844pt>
+File: images/styles_primeng.png Graphic file (type png)
+<use images/styles_primeng.png>
+Package pdftex.def Info: images/styles_primeng.png  used on input line 478.
+(pdftex.def)             Requested size: 348.10097pt x 59.62282pt.
+
+* Missing: images/styles_primeng.pax
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \caption with sig. 'om' on line 486.
+.................................................
+<images/primeng_html.png, id=377, 676.77844pt x 303.38344pt>
+File: images/primeng_html.png Graphic file (type png)
+<use images/primeng_html.png>
+Package pdftex.def Info: images/primeng_html.png  used on input line 486.
+(pdftex.def)             Requested size: 406.0702pt x 182.03146pt.
+* Missing: images/primeng_html.pax
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Chapitre 6.  An-gu-lar
+ []
+
+[24 <./images/styles_primeng.png> <./images/primeng_html.png>] [25
+
+]
+Chapitre 7.
+[26
+
+] [27
+
+]
+Chapitre 8.
+[28
+
+]
+Chapitre 9.
+[29
+
+]
+
+Package biblatex Warning: Type 'online' not found on input line 510.
 
 No file Rapport_Stage.gls.
 No file Rapport_Stage.acr.
 No file Rapport_Stage.ind.
-[18
+[30
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3402,15 +3704,15 @@ No file Rapport_Stage.ind.
 
 File: images/logoSopra.png Graphic file (type png)
 <use images/logoSopra.png>
-Package pdftex.def Info: images/logoSopra.png  used on input line 173.
+Package pdftex.def Info: images/logoSopra.png  used on input line 510.
 (pdftex.def)             Requested size: 143.03401pt x 34.62927pt.
- [19
+ [31
 
 
 ] 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 173.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 510.
 \c@pagesLTS.arabic.1.local.count=\count555
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3422,19 +3724,19 @@ Package pageslts Info: Total number of pages is even.
 
 
 (Rapport_Stage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 510.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 510.
 Package logreq Info: Writing requests to 'Rapport_Stage.run.xml'.
 \openout1 = `Rapport_Stage.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
  ) 
 Here is how much of TeX's memory you used:
- 56514 strings out of 493305
- 1034411 string characters out of 3126757
- 1608064 words of memory out of 3000000
- 58739 multiletter control sequences out of 15000+200000
- 712133 words of font info for 356 fonts, out of 3000000 for 9000
+ 57209 strings out of 493305
+ 1044016 string characters out of 3126757
+ 1616820 words of memory out of 3000000
+ 59296 multiletter control sequences out of 15000+200000
+ 724925 words of font info for 407 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,94p,1982b,2741s stack positions out of 5000i,500n,10000p,200000b,50000s
 {d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/kpfo
@@ -3454,9 +3756,9 @@ lic/kpfonts/jkpmn8a.pfb><d:/Profiles/rrousseau/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/kpfonts/jkpmne.pfb><d:/Profiles/rrousseau/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><d:/Profiles/rroussea
 u/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on Rapport_Stage.pdf (26 pages, 267066 bytes).
+Output written on Rapport_Stage.pdf (38 pages, 494015 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 53526 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 636 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 64003 words of extra memory for PDF output out of 74296 (max. 10000000)
 
