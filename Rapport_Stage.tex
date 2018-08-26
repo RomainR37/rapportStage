@@ -80,7 +80,7 @@ Ses solutions accompagnent près de 800 banques dans 70 pays. Son objectif est d
 
 \section{Présentation}
 
-\textit{Amplitude}, de son nom complet \textit{Sopra Banking Amplitude}, est la solution de \textit{core banking} proposé par \textit{Sopra Banking Software} pour traiter de manière intégrée toutes les problématiques bancaires. Le progiciel a été développé au sein du groupe \textit{Delta Informatique} avant son acquisition par \textit{Sopra}. \textit{Amplitude} est adoptée par 200 banques dans 50 pays et s’adresse à tous types d’institutions financières, de la banque en création aux grands groupes.
+\textit{Amplitude}, de son nom complet \textit{Sopra Banking Amplitude}, est la solution de \textit{core banking} proposée par \textit{Sopra Banking Software} pour traiter de manière intégrée toutes les problématiques bancaires. Le progiciel a été développé au sein du groupe \textit{Delta Informatique} avant son acquisition par \textit{Sopra}. \textit{Amplitude} est adoptée par 200 banques dans 50 pays, principalement en Afrique et en Europe, et s’adresse à tous types d’institutions financières, de la banque en création aux grands groupes.
 
 Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve: 
 
@@ -91,20 +91,48 @@ Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve:
 	\item Une architecture orientée client et process	
 \end{itemize}
 
-Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{Informix-4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. 
+Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{Informix-4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. 	
 
+\textit{Amplitude} a beaucoup évolué depuis ses premières versions, avec l'ajout de nouvelles fonctionnalités et des évolutions marquantes. La dernière version stable, la v.11 nommée \textit{Amplitude Up}, ajoute par exemple de nombreuses fonctionnalités dans le domaine du digital.
 
 \section{Architecture générale}
 
+L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 11.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 11.3.0 également. Néanmoins, le progiciel s'appuie sur une base de programmes commune pour chaque branche. 
 
-Tout \textit{Amplitude}
 
-Arborescence
+D'un point de vue conceptuel, le progiciel a eu plusieurs ébauches de cartographie.
 
+
+SCREEN DE LA CARTO
+
+
+D'un point de vue du code réel,
 
 \chapter{Présentation du projet}
 
-Cartographie / Expression des besoins
+
+\section{Contexte}
+
+Le projet a été lancé à la demande des architectes fonctionnels du progiciel qui effectuent des revues d'analyses. Leurs objectifs sont les suivants:
+
+\begin{itemize}
+	\item Maîtriser l’évolution du modèle de données \textit{Amplitude} pour assurer la pérennité et l’évolutivité dans le temps d’Amplitude en urbanisant les données et en standardisant les développements,
+	\item Orienter l’analyste pour qu’une solution ou un concept réutilisable soit développé(e) et rechercher s’il existe des pistes d’améliorations possibles sur la solution / le concept existant(e) et transmet les axes d’améliorations,
+	\item Valider que les solutions proposées par l’analyste respectent bien les règles et principes d’architecture fonctionnelles et techniques du produit \textit{Amplitude}, et qu’elles sont conformes à la politique éditeur \textit{Amplitude} Up.
+\end{itemize}
+
+Or actuellement dans l'entreprise, aucun outil ne permet de recenser des flux entrants et sortants d'\textit{Amplitude}, d'analyser les impacts suite au développement et de visualiser la cartographie.
+
+Ainsi, la réalisation d’un outil de fiabilisation des informations de recensement, des analyses et de leur visualisation améliorerait la maîtrise du modèle de données \textit{Amplitude} et faciliterait donc la vie aux architectes fonctionnels, voire même aux développeurs.
+
+
+\section{Expression du besoin initial}
+
+
+
+
+
+Le projet suivra une méthode agile pour plusieurs raisons. Tout d'abord, il s'agit d'un projet en interne visant à améliorer la productivité des personnes travaillant sur \textit{Amplitude}. Il n'y a pas d'obligation de mise en production pour un client par exemple. Ensuite, le projet sera divisé en plusieurs lots, avec un lot principal qui devrait terminer à l'issue de mon stage, et de futurs lots incluant des besoins qui n'ont pas été pris en compte dans le premier lot.  
 
 
 \part{Tutoriels et formations}
@@ -423,7 +451,7 @@ WebStorm est l’éditeur faisant parti de la suite produite par Jetbrains avec 
 
 Stackblitz est un éditeur en ligne adapté à divers types de projets Web. Il comporte les fonctionnalités basiques des IDE locaux intégré directement sur navigateur. Le projet est généré à la volée et on peut voir les modifications en direct sur la même fenêtre. Trois panneaux composent l’interface : un avec l’arborescence, un avec l’éditeur et un autre avec l’émulation du projet. 
 
-Un des avantages de Stackblitz par rapport aux éditeurs locaux est de permettre à plusieurs personnes d’éditer un projet en même temps, à la manière de ce que propose Google Drive. Il est possible de partager le projet entier ou bien uniquement la fenêtre d’affichage. Les projets créés sont Stackblitz peuvent être téléchargés sous forme de dossier compressé. 
+Un des avantages de Stackblitz par rapport aux éditeurs locaux est de permettre à plusieurs personnes d’éditer un projet en même temps, à la manière de ce que propose Google Drive. Il est possible de partager le projet entier ou bien uniquement la fenêtre d’affichage. Les projets créés sur Stackblitz peuvent être téléchargés sous forme de dossier compressé. 
 
 \section{Structure d'un projet Angular}
 
