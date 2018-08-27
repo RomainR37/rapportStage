@@ -566,13 +566,37 @@ Cette partie retrace mes activités dans l'entreprise de fin Avril jusqu'au déb
 
 L'aboutissement de la modélisation finale a demandé beaucoup d'échanges au préalable entre les architectes fonctionnels et les personnes travaillant sur l'outil, c'est-à-dire mon encadrant et moi. Des phases de recherche pour comprendre le fonctionnement d'\textit{Amplitude} afin de trouver les meilleurs méthodes pour récupérer la cartographie étaient nécessaires. 
 
-À l'issue des réflexions, nous avons pu aboutir à plusieurs diagrammes: l'un représentant les entités à récupérer avec les liens entre eux, et les autres représentent des diagrammes d'activités qui correspondent à l'alimentation de notre base de données.
+À l'issue des réflexions, nous avons pu aboutir à plusieurs diagrammes: l'un représentant les entités que nous allons manipuler pour créer notre cartographie, et les autres représentant des diagrammes d'activités qui correspondent à l'alimentation de notre base de données.
 
 
 \section{Diagramme d'entité}
 
+On peut séparer le diagramme en deux parties distinctes: d'un côté, ce qu'on peut appeler la cartographie technique représentant les programmes et leurs implémentations; et de l'autre, la cartographie fonctionnelle qui représente les entités tels qu'elles figurent dans le dictionnaire des données.
+
+Coté cartographie technique, on retrouve principalement les éléments suivants : Programme, Module\_4GL, Fonction technique (qui sont les fonctions au sens développeur du terme), Fichier d'échange (qui représentent les différents flux de communication). La \autoref{fig:cartoTech} montre un extrait de cette partie du diagramme.
+
+\begin{figure}
+	\includegraphics[scale=0.6]{images/diagCarto}
+	\caption{Extrait de la partie Cartographie Technique du diagramme d'entité}
+	\label{fig:cartoTech}
+\end{figure}
+
+On peut remarquer que les programmes sont les éléments qui lient la plupart des entités entre eux. En effet, un programme est composé de plusieurs modules 4GL, qui contiennent eux-même diverses fonctions. De plus, un programme peut générer ou recevoir des fichiers d'échange. En effet, un programme a un ou plusieurs types (si c'est un programme batch avec écran ou non) et peut être un Service Métiers Générique (SMG). 
+
+Côté Cartographie fonctionnelle en revanche, on conserve la structure des dictionnaires des données, c'est-à-dire avec plusieurs niveaux de hiérarchie (domaine, fonction, sous-fonction, objet métier) liés aux tables de la base de données, puis qui seront reliés aux programmes de la cartographie technique. 
+
+L'intégralité du diagramme, pour mieux comprendre les liaisons et la structure des entités de notre cartographie, se trouve en \autoref{ann:diagClasse}.
+
 
 \section{Diagramme d'activité}
+
+Les diagrammes d'activité représentent les agissements au cours du temps d'un processus. Ici, ils vont permettre d'avoir une vision sur les méthodes à implémenter pour le développement. La \autoref{fig:diagActivite}
+
+\begin{figure}
+	\includegraphics[scale=0.45]{images/Alimentation_initiale}
+	\caption{Diagramme d'activité de l'alimentation des éléments de la cartographie}
+	\label{fig:diagActivite}
+\end{figure}
 
 
 \chapter{Chiffrage du projet}
@@ -593,5 +617,12 @@ Juin jusqu'à fin août
 
 
 \appendix
+
+\chapter{Diagramme de classe}
+\label{ann:diagClasse}
+
+\begin{landscape}
+	\includegraphics[scale=0.4]{images/CartoV3}
+\end{landscape}
 
 \end{document}
