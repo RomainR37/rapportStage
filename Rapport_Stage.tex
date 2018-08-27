@@ -91,22 +91,37 @@ Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve:
 	\item Une architecture orientée client et process	
 \end{itemize}
 
-Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{Informix-4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. 	
+Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{Informix-4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. Par ailleurs, on appelle \textbf{module} un fichier source de 4GL (avec une extension \textit{.4gl}).
 
 \textit{Amplitude} a beaucoup évolué depuis ses premières versions, avec l'ajout de nouvelles fonctionnalités et des évolutions marquantes. La dernière version stable, la v.11 nommée \textit{Amplitude Up}, ajoute par exemple de nombreuses fonctionnalités dans le domaine du digital.
+
 
 \section{Architecture générale}
 
 L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 11.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 11.3.0 également. Néanmoins, le progiciel s'appuie sur une base de programmes commune pour chaque branche. 
 
+D'un point de vue conceptuel, les différentes fonctions présentes dans le progiciel ont été cartographiées et répertoriées sous différentes entités. La \autoref{fig:carto} représente un aperçu de la cartographie fonctionnel d'\textit{Amplitude}. Pour comprendre un peu mieux cette cartographie, nous pouvons prendre un exemple. La fonction "Chèques" fait partie du domaine "Opérations". Et la fonction "Chèques" contient elle-même des sous-fonctions, et ainsi de suite. L'ensemble des données cartographiées est visible sur le dictionnaire des données, qui sera présenté plus tard dans le rapport. 
 
-D'un point de vue conceptuel, le progiciel a eu plusieurs ébauches de cartographie.
+\begin{figure}
+	\includegraphics[scale=0.62]{images/Cartographie_fonctionnelle}
+	\caption{Cartographie fonctionnelle d'\textit{Amplitude}}
+	\label{fig:carto}
+\end{figure}
 
+D'un point de vue du code tel qu'il est implémenté, les sources d'une version \textit{Amplitude} comporte les répertoires suivants:
 
-SCREEN DE LA CARTO
+\begin{description}
+	\item[BaseProg] : contient la liste des fichiers \textbf{BaseProg}. Ceux-ci répertorient les modules utilisés pour un programme donnée
+	\item[base\_ref] : contient le schéma de référence \textit{Amplitude}, sert principalement à la compilation
+	\item[bin] : contient la liste des sources binaires
+	\item[migration] : contient la liste des scripts permettant de gérer les migrations de serveur
+	\item[src] : contient les répertoires sources 4gl et \textit{per} (les écrans) organisés par module (ATTENTION: ne pas confondre module en tant que qu'entité pour l'organisation et module 4gl, c'est-à-dire les fichiers sources)
+	\item[xcf] : contient la liste des services métiers génériques (SMG) disponibles. Les SMG sont des programmes utilisés par \textit{Amplitude} mais extérieur au progiciel.
+	\item[xsd] : contient les fichiers \textit{xsd} nécessaires au produit.
+\end{description}
 
+Nous ne rentrerons pas dans le détail du fonctionnement de chacune des sources présentées ici, mais nous verrons davantage d'éléments sur ce qui nous servira pour le projet dans la suite du rapport (dans la \autoref{part:dev} notamment).
 
-D'un point de vue du code réel,
 
 \chapter{Présentation du projet}
 
@@ -121,22 +136,48 @@ Le projet a été lancé à la demande des architectes fonctionnels du progiciel
 	\item Valider que les solutions proposées par l’analyste respectent bien les règles et principes d’architecture fonctionnelles et techniques du produit \textit{Amplitude}, et qu’elles sont conformes à la politique éditeur \textit{Amplitude} Up.
 \end{itemize}
 
-Or actuellement dans l'entreprise, aucun outil ne permet de recenser des flux entrants et sortants d'\textit{Amplitude}, d'analyser les impacts suite au développement et de visualiser la cartographie.
+Or actuellement dans l'entreprise, aucun outil ne permet de recenser des flux entrants et sortants d'\textit{Amplitude}, d'analyser les impacts suite au développement et de visualiser la cartographie. Les architectes fonctionnels utilisent des fichiers Excels répertoriant ses informations, ce qui n'est pas la meilleure solution d'un point de vue efficacité.
 
 Ainsi, la réalisation d’un outil de fiabilisation des informations de recensement, des analyses et de leur visualisation améliorerait la maîtrise du modèle de données \textit{Amplitude} et faciliterait donc la vie aux architectes fonctionnels, voire même aux développeurs.
 
 
-\section{Expression du besoin initial}
+\section{Expression du besoin}
+
+Les besoins principaux demandés sont les suivants:
+
+\begin{description}
+	\item[Dictionnaire des flux, interfaces et éditions] : l'idée serait de faire un dictionnaire regroupant l'ensemble de flux entrants et sortants d'\textit{Amplitude}. Cela permettrait de gagner en efficacité lors des revues d'analyses et de solution, d'améliorer l'efficacité de l'ensemble des acteurs sur l'analyse d'impact de l'évolution et d'apporter une meilleur plus-value pour les clients.
+	\item[Analyse et alerte sur les impacts développements] : avoir un aperçu des impacts que pourraient avoir la modification d'une fonction d'un module. Cela faciliterait l'analyse d'impact pour les analystes, les testeurs et les architectes, de donner une vision globale aux nouveaux arrivants et de prévenir les risques en cas d'évolution futures.
+	\item[Visualisation de la cartographie] : avoir un aperçu global de la cartographie, pouvoir zoomer sur les sous-fonctions, les programmes, les tables, etc., ajouter des commentaires...
+\end{description}
 
 
+\section{Description des exigences}
+
+L'outil de cartographie devrait supporter les versions d'\textit{Amplitude Up} ouvertes aux clients (version 11 et supérieur). L'outil sera interfacé avec le dictionnaire des données qui regroupe les éléments de la cartographie fonctionnelle ainsi qu'aux versions d'\textit{Amplitude} souhaitées par le biais de SVN. 
+
+Le but du projet étant de proposer une visualisation de la cartographie, l'outil devra avoir une interface claire, lisible, qui puisse perdurer à l'avenir. Ainsi, le choix d'utiliser \textit{Angular} pour la partie front-end est venu (le fonctionnement d'\textit{Angular} est détaillé dans le \autoref{chap:angular}). Des fonctions de recherche devront être implémentées pour retrouver facilement les entités que l'on souhaite observer.
+
+Les programmes d'\textit{Amplitude} devront être répertoriés avec, quand cela est possible, les informations suivantes:
+
+\begin{itemize}
+	\item Le nom du programme
+	\item La description du programme
+	\item Les champs d’application du programme : standard, spécifique adhérent, spécifique non adhérent, etc. La liste doit être paramétrable
+	\item Les caractéristiques du programme : le pays, la zone géographique, le client ou groupe, etc. La liste doit être paramétrable
+	\item Le type de programme : batch, transactionnel, écran (attention, plusieurs choix possibles pour un programme)
+	\item Les commentaires
+\end{itemize}
 
 
+\section{Gestion de projet}
 
 Le projet suivra une méthode agile pour plusieurs raisons. Tout d'abord, il s'agit d'un projet en interne visant à améliorer la productivité des personnes travaillant sur \textit{Amplitude}. Il n'y a pas d'obligation de mise en production pour un client par exemple. Ensuite, le projet sera divisé en plusieurs lots, avec un lot principal qui devrait terminer à l'issue de mon stage, et de futurs lots incluant des besoins qui n'ont pas été pris en compte dans le premier lot.  
 
+Je serai la seule personne qui va travailler sur l'outil de cartographie à temps plein. Néanmoins, je vais être accompagné pendant toutes les étapes pour mon encadrant et par mes collègues lorsque certains problèmes bloquants se présenteront.
+
 
 \part{Tutoriels et formations}
-
 
 Cette partie sera consacrée aux différents tutoriels et formations que j'ai effectué lors des premières semaines de stage (approximativement les 3 semaines du mois d'Avril). Après avoir pris connaissance du sujet et des locaux, une phase de mise à niveau sur les outils que nous allions utiliser s'imposait. Le principe était de réaliser des tutoriels préconisés par mon encadrant (tutoriels internes à \textit{Sopra} ou sur Internet) et de réaliser des comptes-rendus (ou \textit{Proof of Concept}) sur les outils observés pour que les personnes souhaitant s'intéresser au sujet puissent avoir un support disponible. Les formations étaient portées sur trois technologies principales : \textit{Spring Boot}, \textit{Spring Data} et \textit{Angular}. Ces technologies seront détaillées dans cette partie.
 
@@ -422,6 +463,7 @@ Pour lancer un projet utilisant Spring Boot, Spring Data JPA et Spring Data REST
 
 
 \chapter{Angular}
+\label{chap:angular}
 
 Angular est un framework open-source basé sur le langage TypeScript permettant de réaliser des applications web. Il a été initié par Google en 2016 sous la forme d’un autre framework appelé AngularJS, basé sur JavaScript. Il a été totalement refait par les mêmes équipes pour créer Angular tel qu’on le connaît aujourd’hui. Il est néanmoins nécessaire d’être vigilent lors de la recherche d’informations sur la version d’Angular utilisée, car AngularJS, la version 1 d’Angular, est toujours maintenu et utilisé par certains sites. La version stable d’Angular la plus récente est la version 5, cependant une nouvelle version d’Angular sort environ tous les 6 mois. La version 6 est sortie courant Avril 2018 mais n’est pas encore stable.
 
@@ -518,19 +560,36 @@ Ensuite, pour ajouter un module en particulier, par exemple si l’on souhaite a
 
 \part{Modélisation de l'outil et chiffrage du projet}
 
-Fin Avril jusqu'à début juin
+Cette partie retrace mes activités dans l'entreprise de fin Avril jusqu'au début du mois de juin. L'essentiel du travail effectué était consacré à la modélisation de l'outil et au chiffrage des phases de développement du projet.  
 
 \chapter{Modélisation UML}
 
+L'aboutissement de la modélisation finale a demandé beaucoup d'échanges au préalable entre les architectes fonctionnels et les personnes travaillant sur l'outil, c'est-à-dire mon encadrant et moi. Des phases de recherche pour comprendre le fonctionnement d'\textit{Amplitude} afin de trouver les meilleurs méthodes pour récupérer la cartographie étaient nécessaires. 
 
-\part{Développement}
+À l'issue des réflexions, nous avons pu aboutir à plusieurs diagrammes: l'un représentant les entités à récupérer avec les liens entre eux, et les autres représentent des diagrammes d'activités qui correspondent à l'alimentation de notre base de données.
+
+
+\section{Diagramme d'entité}
+
+
+\section{Diagramme d'activité}
+
+
+\chapter{Chiffrage du projet}
+
+
+\part{Développement de l'outil}
+\label{part:dev}
 
 Juin jusqu'à fin août
 
-\chapter{title}
+\chapter{Partie back-end}
 
 
-\chapter{Bilan du stage}
+\chapter{Partie front-end}
+
+
+\chapter*{Bilan du stage}
 
 
 \appendix
