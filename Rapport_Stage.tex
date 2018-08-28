@@ -97,6 +97,7 @@ Les premières mises en production d'\textit{Amplitude} datent du début des ann
 
 
 \section{Architecture générale}
+\label{sec:architectureAmplitude}
 
 L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 11.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 11.3.0 également. Néanmoins, le progiciel s'appuie sur une base de programmes commune pour chaque branche. 
 
@@ -627,17 +628,43 @@ Auparavant, il sera nécessaire de faire interagir le projet avec les versions d
 
 \subsection{Création des programmes en base}
 
+La première phase de l’alimentation de la base est la création des programmes dans la base de données. La récupération des programmes se fait à partir du dossier contenant les \textit{BaseProg} (voir la \autoref{sec:architectureAmplitude} pour voir l'architecture d'\textit{Amplitude}). Ceux-ci vont nous permettre de récupérer plusieurs données qui nous intéressent : le nom des programmes, leur type quand celui-ci est indiqué et certaines caractéristiques comme le client ou la zone géographique quand elles sont disponibles. Ces données peuvent être récupérées d’après les noms des \textit{BaseProg} qui respectent la convention de nommage suivante : \javacode{module.type.nom_programme}
+
+Dans certains cas, on retrouve le nommage suivant, ajoutant des caractéristiques: \javacode{module.caractéristique.type.nom_programme}. 
+
+Ici, l’objectif sera de lister les fichiers de BaseProg, de parser chaque résultat en conservant les données que l’on souhaite, puis de créer les requêtes pour alimenter notre base. 
+
 \subsection{Création des modules 4GL en base}
+
+Une fois les programmes enregistrés, l’étape suivante est l’alimentation des modules 4GL en base. La récupération des modules 4GL se fait en parcourant l’arborescence des fichiers sources d’Amplitude. Pour chaque dossier de l’arborescence, on liste les modules présents et on conserve en base les noms des fichiers avec leur répertoire d’origine. 
+
 
 \subsection{Création des fonctions techniques en base}
 
+
+Plusieurs solutions sont possibles pour récupérer les fonctions techniques. Tout d’abord, on appelle fonctions techniques, les fonctions définies dans les modules 4GL. La méthode brute pour les récupérer serait donc de parser l’intégralité des fichiers sources pour y retrouver les fonctions définies. Cependant, il existe un outil en Python permettant de retrouver les fonctions appelées dans un programme : \textit{check\_func\_xml.py}. L’idée est donc de modifier ce script afin de retrouver les fonctions définies par module 4GL. Les modifications à effectuer devront permettre de sortir un flux texte exploitable par la suite dans le programme Java avec les indications suivantes : nom de la fonction, module 4GL où elle est définie et la liste des fonctions appelées par cette fonction. Ces informations devront être ensuite conservées en base avec Spring Data. 
+
+
 \subsection{Association des modules 4GL et des programmes}
+
+À ce stade, les modules 4GL et les programmes ont été enregistrés en base. L’association des modules 4GL et des programmes se fera en utilisant le script Python l4gl.py qui affiche la liste des modules présents dans le baseprog d’un programme. À partir de cette liste, on associe le programme sélectionné aux modules affichés suite à l’exécution du script python. Parmi ces modules, on retrouve un module portant le même nom que le programme : le module principal du programme. Cette information sera à conserver en base. 
+
 
 \subsection{Association des fonctions et des programmes}
 
+L’association des modules et des programmes se fera en utilisant le même script que pour la création des programmes en base : \textit{check\_func\_xml.py}. Pour rappel, ce programme permet d’afficher les fonctions appelées par un programme donnée. Dans notre cas, il suffit d’appeler le script pour chaque programme et d’associer les fonctions affichées avec le programme. Un modification du code Python sera nécessaire pour afficher une sortie qui correspond à notre besoin.
+
+
 \subsection{Extraction du dictionnaire des programmes}
 
+L’utilisation des données du dictionnaire des programmes va nous permettre d’ajouter des informations supplémentaires aux programmes enregistrés dans notre base et aussi d’y ajouter les modules fonctionnels. Le dictionnaire des programmes se présente sous un fichier Excel avec deux feuilles de calcul : la première décrivant la liste des programmes avec leurs descriptions, leurs modules fonctionnels associés et d’autres informations, et la seconde lisant les modules fonctionnels ainsi que leur représentation sous forme de code à 3 caractères. L’objectif pour nous sera de parcourir la liste des modules et de les enregistrer en base dans un premier temps, puis, pour chaque programme du dictionnaire, on enregistre la description associée. 
+
+
 \subsection{Récupération des SMG}
+
+Les SMG sont des programmes particuliers que l’on peut retrouver avec le type webservice. Les SMG ont néanmoins un autre nom qui désigne leur action (exemple d’un SMG: createAccount). La récupération de ces informations se fera à partir des fichiers xcf dans l’arborescence d’Amplitude. L’objectif sera de lister les fichiers xcf, de garder en mémoire les noms de fichier, et de parser chaque fichier xcf pour récupérer le nom du programme associé. 
+
+D’autres données concernant les SMG sont disponibles dans le dictionnaire des SMG. Il s’agit d’un fichier Excel similaire au dictionnaire des programmes qui va nous permettre d’ajouter des informations complémentaires, notamment la description du SMG. 
 
 
 \chapter{Chiffrage du projet}
@@ -654,10 +681,14 @@ Une fois les différentes étapes de développement posées, nous avons pu effec
 	Partie View 	& 1 \\ 
 	\hline 
 	\textbf{Back-end}	&  \\ 
-	Création du modèle & 10 \\
+	Création du modèle : & 10 \\
 	~~\llap{\textbullet}~~ tables + entities + dao + services avec Spring Data &  \\ 
 	\hline 
 	\textbf{Alimentation}	&  \\ 
+	Création des programmes en base : & 3 \\
+	~~\llap{\textbullet}~~ Récupération de la liste des programmes dans le BaseProg &  \\ 
+	~~\llap{\textbullet}~~ Parsing des résultats (récupération du nom, du type, éventuellement des caracs pour certains programmes) &  \\ 
+	
 	\hline 
 	&  \\ 
 	\hline 
