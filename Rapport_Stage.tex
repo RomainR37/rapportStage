@@ -560,7 +560,7 @@ Ensuite, pour ajouter un module en particulier, par exemple si l’on souhaite a
 
 \part{Modélisation de l'outil et chiffrage du projet}
 
-Cette partie retrace mes activités dans l'entreprise de fin Avril jusqu'au début du mois de juin. L'essentiel du travail effectué était consacré à la modélisation de l'outil et au chiffrage des phases de développement du projet.  
+Cette partie retrace mes activités dans l'entreprise de fin Avril jusqu'au début du mois de juin. L'essentiel du travail effectué était consacré à la modélisation de l'outil, aux spécifications et au chiffrage des phases de développement du projet.  
 
 \chapter{Modélisation UML}
 
@@ -587,10 +587,9 @@ Côté Cartographie fonctionnelle en revanche, on conserve la structure des dict
 
 L'intégralité du diagramme, pour mieux comprendre les liaisons et la structure des entités de notre cartographie, se trouve en \autoref{ann:diagClasse}.
 
-
 \section{Diagramme d'activité}
 
-Les diagrammes d'activité représentent les agissements au cours du temps d'un processus. Ici, ils vont permettre d'avoir une vision sur les méthodes à implémenter pour le développement. La \autoref{fig:diagActivite}
+Les diagrammes d'activité représentent les agissements au cours du temps d'un processus. Ici, ils vont permettre d'avoir une vision sur les méthodes à implémenter pour le développement. La \autoref{fig:diagActivite} représente l'alimentation de notre base de données étape par étape. Il s'agit ici du schéma tel que penser au mois de mai. Plusieurs modifications ont été opérées mais l'essentiel de la structure est présente. 
 
 \begin{figure}
 	\includegraphics[scale=0.45]{images/Alimentation_initiale}
@@ -598,19 +597,102 @@ Les diagrammes d'activité représentent les agissements au cours du temps d'un 
 	\label{fig:diagActivite}
 \end{figure}
 
+Le point de départ du processus d'alimentation est la récupération d'une version d'\textit{Amplitude} qui se fait par le biais de SVN, un outil de versioning. Effectuer un \textit{checkout} comme on le voit sur le diagramme signifie récupérer les sources versionnées pour pouvoir les exploiter plus facilement.
+
+Ensuite, le processus est divisé en deux parties avec d'un côté, la récupération de la cartographie technique et de l'autre, l'extraction du dictionnaire de données V3 pour la cartographie fonctionnelle. L'idée d'un premier temps était d'enregistrer tous les programmes d'\textit{Amplitude}, puis d'analyser chacun d'entre eux pour récupérer les modules, les fonctions et les autres informations dont on a besoin, comme on peut le voir sur la \autoref{fig:diagActivite}. Ce principe n'a pas été conservé dans l'implémentation finale car il ne permettait pas de voir des fonctions ou des modules qui sont présents sur \textit{Amplitude} mais qui ne sont pas utilisés par des programmes. Ainsi, la solution que nous avons opté est une récupération complète des programmes, de modules et des fonctions séparément, puis une association des composants entre eux. Ce qui permet ainsi de voir l'intégralité des éléments composant \textit{Amplitude} et de distinguer les fonctions non utilisées. 
+
+La récupération du dictionnaire des données pour la cartographie fonctionnelle se fera en réalité de manière plus simple que sur le diagramme d'activité. En effet, nous avons eu l'autorisation d'accès aux éléments de la base de données du dictionnaire de données. Ainsi, nous aurons la possibilité de les exposer en REST facilement pour les afficher par la suite. 
+
+\chapter{Spécifications de l'outil de cartographie}
+
+Ce chapitre sera consacré aux étapes de développement à mettre en pour réaliser l’outil de cartographie. On distinguera deux parties distinctes sur le projet: une partie \textit{back-end} avec les implémentations \textit{Java} et \textit{Spring} qui va comporter les fonctions d’analyse et de gestion des données d’Amplitude, et une autre côté \textit{front-end} avec les composants \textit{Angular} qui va gérer les affichages et les interfaces utilisateurs.
+
+Après un premier chiffrage, nous avons pu remarquer que le temps nécessaire à la finalisation de l'outil sera supérieur à mon temps de stage restant. Ainsi, nous avons décidé de nous focaliser davantage sur la partie \textit{back-end} du projet. Les spécifications sont donc bien plus détaillées pour cette partie que pour le \textit{front-end}.
+
+La partie \textit{back-end} de l’application regroupe les éléments de gestion des données présentes dans \textit{Amplitude}. L’outil devra tenir compte des programmes d’Amplitude, des modules 4GL présents dans l’arborescence, des fonctions composant ces modules, et plus généralement des éléments présents dans le diagramme de classe. Le modèle de données pour l’outil sera réalisé avec \textit{Spring Data}, qui permet un interfaçage automatique entre le code source en Java et le gestionnaire de base de données configuré (dans notre cas, Oracle). Une fois le modèle réalisé, nous avons songé à faire séparer le processus d'alimentation en deux: l’alimentation initiale des tables de notre modèle dans un premier temps et la mise à jour régulière des éléments de la base dans un second. Au final, la séparation des processus d'alimentation n'est pas nécessaire, et un unique job prenant en compte les deux cas de figure suffit.
+
+La partie front-end de l’outil sera développée sous Angular et suivra une architecture REST. Les écrans devront être à même de récupérer les données exposées par la partie back-end. L’objectif des écrans est de donner un aperçu général de la cartographie. Un panneau de recherche des données devra permettre de retrouver les informations que l’on souhaite le plus simplement possible. 
+
+
+\section{Création du modèle}
+
+L’architecture du back-end sera divisée en deux parties principales : une partie cartographie fonctionnelle et une partie cartographie technique. La cartographie fonctionnelle correspond aux entités définies à partir du dictionnaire des données. Pour le moment, l’outil ira chercher directement les informations dans la base de données du dictionnaire et les exposera en REST à la partie \textit{front-end}. Ce n'est pas une méthode qui sera fiable à long terme car avoir un accès direct une base de données peut provoquer des problèmes de sécurité. Cependant, étant donné que la base de données du dictionnaire est temporaire avant une future évolution sur une autre technologie, nous avons opté pour cette solution en envisageant les possibilités avec les futures évolutions. La partie cartographie technique regroupera les analyses et les méthodes liées aux programmes et aux modules d’Amplitude. 
+
+
+\section{Alimentation de la base}
+
+Plusieurs étapes sont nécessaires afin de récupérer l'intégralité des informations nécessaire à la cartographie: la création des programmes en base, la création des modules 4GL, la création des fonctions techniques, l'association des modules 4Gl et des programmes, l'association des fonctions et des programmes, l'extraction du dictionnaire des programmes et la récupération des SMG.
+
+Auparavant, il sera nécessaire de faire interagir le projet avec les versions d'\textit{Amplitude} en utilisant l'outil de versionnage SVN. Ainsi, pour chaque version d’Amplitude que l’on souhaite étudier, il faudra effectuer un \textit{checkout} d’Amplitude. C’est à partir des \textit{working copy} récupérées que l’on va effectuer les analyses et les créations d’entités en base. Il sera nécessaire par la suite d’effectuer des \textit{update} des versions lors des alimentations régulières pour observer les différences et mettre à jour les versions. 
+
+\subsection{Création des programmes en base}
+
+\subsection{Création des modules 4GL en base}
+
+\subsection{Création des fonctions techniques en base}
+
+\subsection{Association des modules 4GL et des programmes}
+
+\subsection{Association des fonctions et des programmes}
+
+\subsection{Extraction du dictionnaire des programmes}
+
+\subsection{Récupération des SMG}
+
 
 \chapter{Chiffrage du projet}
 
+Une fois les différentes étapes de développement posées, nous avons pu effectué un chiffrage du projet avec le nombre de jours attribué à chaque tâche.
+
+\begin{tabular}{|l|r|}
+	\hline 
+	\textbf{Tâches}	& \textbf{Nombre de jours} \\ 
+	\hline
+	\hline 
+	\textbf{Architecture du projet} &  \\ 
+	Partie Modèle	& 1 \\
+	Partie View 	& 1 \\ 
+	\hline 
+	\textbf{Back-end}	&  \\ 
+	Création du modèle & 10 \\
+	~~\llap{\textbullet}~~ tables + entities + dao + services avec Spring Data &  \\ 
+	\hline 
+	\textbf{Alimentation}	&  \\ 
+	\hline 
+	&  \\ 
+	\hline 
+	&  \\ 
+	\hline 
+	&  \\ 
+	\hline 
+	&  \\ 
+	\hline 
+\end{tabular} 
+
+
+Au total, le nombre de jours attribué est de 75 pour finaliser l'outil, ce qui sera trop long par rapport à mon temps de stage restant. 
 
 \part{Développement de l'outil}
 \label{part:dev}
 
-Juin jusqu'à fin août
-
-\chapter{Partie back-end}
+Les premiers développements ont débuté au mois de juin et se sont prolongés jusqu'au mois d'août.
 
 
-\chapter{Partie front-end}
+\chapter{Outils utilisés, structure et arborescence du projet}
+
+Eclipse JEE
+
+Arborescence du projet
+
+Explications de la structure avec les packages
+
+\chapter{Gestion du job d'alimentation}
+
+
+\chapter{Exposition REST des données}
+
+
+\chapter{Gestion du front-end et de la sécurité}
 
 
 \chapter*{Bilan du stage}
