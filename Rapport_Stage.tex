@@ -726,7 +726,8 @@ Une fois les différentes étapes de développement posées, nous avons pu effec
 \end{longtable} 
 
 
-Au total, le nombre de jours attribué est de 75 pour finaliser l'outil, ce qui sera trop long par rapport à mon temps de stage restant. 
+Au total, le nombre de jours attribué est de 75 pour finaliser l'outil, ce qui sera trop long par rapport à mon temps de stage restant. Selon nos comptes, à l'issue de mon stage, la partie \textit{back-end} de l'application sera terminée, ce qui ne sera pas le cas pour la partie \textit{front-end}.
+
 
 \part{Développement de l'outil}
 \label{part:dev}
@@ -777,10 +778,38 @@ Comme expliqué, on retrouve de nombreux éléments différents dans la partie \
 
 Les fichiers de ressources contenant les propriétés de l'application et du job d'alimentation sont contenus dans le package \textbf{main/resources}.
 
+Du côté \textit{Angular}, la structure reprend celle d'un projet \textit{Angular} classique dont nous verrons plus de détails dans le \autoref{chap:frontEnd}.
+
 \chapter{Exposition REST des données}
 
-Explication sur le REST
+\section{Principe du REST}
 
+L'un des points central de notre outil est l'exposition des données de la partie \textit{back-end} à la partie \textit{front-end}. Et l'exposition des données se fera par le biais d'une architecture REST. Le REST (Representational State Transfer) est un style d'architecture permettant de construire des applications. Il s'agit davantage d'un ensemble de conventions et de bonnes pratiques plutôt qu'une technologie à part entière. Cette architecture utilise les spécifications originelles du protocole HTTP. 
+
+REST se base sur les URI (Uniform Resource Identifier) afin d’identifier une ressource. Ainsi une application se doit de construire ses URI (et donc ses URL) de manière précise, en tenant compte des contraintes REST. Il est nécessaire de prendre en compte la hiérarchie des ressources et la sémantique des URL pour les éditer. Dans notre cas par exemple, pour récupérer l'ensemble des domaines présents dans le dictionnaire des données, nous pouvons utiliser l'URL : \javacode{/dico/domaines}. Pour en récupérer un avec un identifiant précis, on utilise l'URL : \javacode{/dico/domaines/\{id\}} avec l'identifiant que l'on souhaite.
+
+Ensuite, la gestion des ressources se fait en utilisant des requêtes HTTP. Ainsi, on peut effectuer 4 opérations (les 4 opérations du CRUD) :
+
+\begin{itemize}
+	\item Créer (create) $\Rightarrow$ \textbf{POST}
+	\item Afficher (read) $\Rightarrow$ \textbf{GET}
+	\item Mettre à jour (update) $\Rightarrow$ \textbf{PUT}
+	\item Supprimer (delete) $\Rightarrow$ \textbf{DELETE}
+\end{itemize}
+
+Une exemple avec notre outil, une mise à jour d'un programme de la cartographie se fera avec une requête \textbf{PUT} sur l'URL \javacode{/carto/programmes/\{id\}} avec l'identifiant du programme que l'on souhaitera modifier.
+
+\section{Implémentation avec \textit{Spring Data}}
+
+L'implémentation du REST avec \textit{Spring Data} se fait facilement à l'aide des différentes annotations à disposition. Tout d'abord, il faut préciser que les contrôleurs de l'application prennent en compte le REST avec l'annotation \javacode{@RestController}. Ensuite, il faut indiquer \textit{Spring} le \textit{mapping} de l'application, en d'autres termes, les URL qui seront utilisées pour le partage des ressources. Le \textit{mapping} se fait avec des annotations \javacode{@RequestMapping} sur la classe du contrôleur pour indiquer le contexte général, puis sur les méthodes qui vont gérer les ressources. La \autoref{fig:restController} montre une implémentation de l'architecture REST.
+
+\begin{figure}
+	\includegraphics[scale=0.65]{images/restController}
+	\caption{Prise en charge du REST avec \textit{Spring Data}}
+	\label{fig:restController}
+\end{figure}
+
+On peut voir sur l'illustration l'annotation \javacode{@RequestMapping("/dico")} qui précède la déclaration du contrôleur ainsi que l'annotation \javacode{@RequestMapping("/domaines/\{id\}")} avant la déclaration de la méthode qui récupère un domaine selon l'identifiant. 
 
 
 \chapter{Gestion du job d'alimentation}
@@ -789,14 +818,34 @@ Quartz, implémentation du schedule
 
 
 \chapter{Gestion du front-end et de la sécurité}
+\label{chap:frontEnd}
+
+L'outil final pourrait être accessible à de nombreuses personnes au sein de l'entreprise une fois la mise en production. La nécessité de sécuriser la plate-forme est d'abord présente étant donné qu'il est possible de manipuler des données faisant parties intégrantes de la cartographie. Une modification même minime sur les données pourrait entraîner des problèmes, notamment si cela touche des données associées avec d'autres.
+
 
 Sécurité géré avec Spring Security
 
-Screen des écrans
+On peut voir dans la \autoref{fig:restController} dans le chapitre précédent la présence de l'annotation \javacode{@PreAuthorize("isAuthentificated()")}. Celle-ci permet de refuser l'accès à la méthode si le visiteur ne s'est pas authentifié au préalable. 
 
+
+\begin{figure}
+	\includegraphics[scale=0.8]{images/cartoLogin}
+	\caption{Page d'authentification de l'outil de cartographie}
+	\label{fig:cartoLogin}
+\end{figure}
+
+
+\begin{figure}
+	\includegraphics[scale=0.45]{images/cartoAccueil}
+	\caption{Page d'accueil de l'outil de cartographie}
+	\label{fig:cartoAccueil}
+\end{figure}
 
 
 \chapter*{Bilan du stage}
+
+
+Remerciement
 
 
 \appendix
