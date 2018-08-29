@@ -1,4 +1,6 @@
 \documentclass{polytech/polytech}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 
 \typereport{stagedi5}
 
@@ -669,9 +671,9 @@ D’autres données concernant les SMG sont disponibles dans le dictionnaire des
 
 \chapter{Chiffrage du projet}
 
-Une fois les différentes étapes de développement posées, nous avons pu effectué un chiffrage du projet avec le nombre de jours attribué à chaque tâche.
+Une fois les différentes étapes de développement posées, nous avons pu effectué un chiffrage du projet avec le nombre de jours attribué à chaque tâche ce qui va nous permettre d'avoir une idée sur la complexité de certaines mises en place.
 
-\begin{tabular}{|l|r|}
+\begin{longtable}{|L{12cm}|r|}
 	\hline 
 	\textbf{Tâches}	& \textbf{Nombre de jours} \\ 
 	\hline
@@ -688,17 +690,40 @@ Une fois les différentes étapes de développement posées, nous avons pu effec
 	Création des programmes en base : & 3 \\
 	~~\llap{\textbullet}~~ Récupération de la liste des programmes dans le BaseProg &  \\ 
 	~~\llap{\textbullet}~~ Parsing des résultats (récupération du nom, du type, éventuellement des caracs pour certains programmes) &  \\ 
-	
+	~~\llap{\textbullet}~~ Alimentation de la table &  \\ 
+	Création des modules 4gl en base : & 2 \\
+	~~\llap{\textbullet}~~ Parcours de l'arborescence d'Amplitude &  \\ 
+	~~\llap{\textbullet}~~ Alimentation de la table &  \\ 
+	Création des fonctions techniques en base : & 2 \\
+	~~\llap{\textbullet}~~ Modification du script \textit{check\_func\_xml.py} & 3 \\ 
+	~~\llap{\textbullet}~~ Appel du script python et lecture du résultat & 2 \\ 
+	~~\llap{\textbullet}~~ Création des fonction techniques & 2 \\ 
+	~~\llap{\textbullet}~~ Liste des fonctions appelées par la fonction sélectionnée avec alimentation & 2 \\ 
+	Association des modules 4gl et des programmes : & \\
+	~~\llap{\textbullet}~~ Appel de \textit{l4gl.py} et lecture du résultat & 2 \\ 
+	~~\llap{\textbullet}~~ Alimentation & 2 \\ 
+	~~\llap{\textbullet}~~ Détermination du module 4gl principal & 1 \\
+	Association des fonctions et des programmes : & \\
+	~~\llap{\textbullet}~~ Modification du script \textit{check\_func\_xml.py} & 1 \\ 
+	~~\llap{\textbullet}~~ Appel du script & 2 \\ 
+	~~\llap{\textbullet}~~ Alimentation de la base & 2 \\ 
+	Extraction du dictionnaire des programmes : & \\
+	~~\llap{\textbullet}~~ Lecture du fichier Excel & 3 \\ 
+	~~\llap{\textbullet}~~ Alimentation de la base & 2 \\ 
+	Récupération des SMG : & \\
+	~~\llap{\textbullet}~~ Lecture du XCF & 1 \\ 
+	~~\llap{\textbullet}~~ Parse du fichier XCF & 2 \\ 
+	~~\llap{\textbullet}~~ Alimentation & 1 \\ 
+	~~\llap{\textbullet}~~ Lecture du fichier Excel pour alimentation & 2 \\ 
+	Implémentation des connexions SVN & 2 \\
 	\hline 
-	&  \\ 
+	Création du job	& 6 \\ 
 	\hline 
-	&  \\ 
+	\textbf{Front End} &  \\ 
+	Écrans & 20 \\
 	\hline 
-	&  \\ 
-	\hline 
-	&  \\ 
-	\hline 
-\end{tabular} 
+	\caption{Chiffrage des phases de développement de l'outil de cartographie }
+\end{longtable} 
 
 
 Au total, le nombre de jours attribué est de 75 pour finaliser l'outil, ce qui sera trop long par rapport à mon temps de stage restant. 
@@ -706,24 +731,69 @@ Au total, le nombre de jours attribué est de 75 pour finaliser l'outil, ce qui 
 \part{Développement de l'outil}
 \label{part:dev}
 
-Les premiers développements ont débuté au mois de juin et se sont prolongés jusqu'au mois d'août.
+Les premiers développements ont débuté au mois de juin et se sont prolongés jusqu'à la fin de mon stage au mois d'août. Cette partie sera consacrée à l'implémentation des différents éléments de l'outil de cartographie.
+
+\chapter{Outils utilisés et arborescence du projet}
+
+Ce chapitre traite des différents outils utilisés pour le développement ainsi que la structure générale des sources du projet. 
+
+\section{IDE et outils de développement utilisés}
+
+Les développements du projet se sont fait avec l'éditeur \textit{Eclipse}. Il a l'avantage d'être l'un des plus complets et efficaces du marché, tout en étant open source. L'éditeur donne accès à une vaste bibliothèque d'extensions permettant d'améliorer l'efficacité du développement. Parmi ces extensions, j'ai notamment rajouté le plug-in \textit{Sonarlint} qui permet d'analyser le code et de détecter les mauvaises pratiques de développement pouvant mener à des bugs ou des ralentissements. C'est une extension pratique pour garantir une qualité de code et pour améliorer les développements en général.
+
+Une autre extension qui va nous servir sur le projet est \textit{Angular IDE}. Il s'agit d'une extension permettant de prendre en charge les projets \textit{Angular}, ce qui va nous permette de gérer le côté Java et le côté \textit{Angular} du projet dans un seul éditeur. 
+
+\section{Arborescence du projet}
 
 
-\chapter{Outils utilisés, structure et arborescence du projet}
+Le projet est séparé en deux parties avec le \textit{back-end} d'un côté et le \textit{front-end} de l'autre. L'idée est de respecter un pattern MVC, ainsi la partie \textit{back-end} contiendra les éléments du Modèle et du Contrôleur et la partie \textit{front-end} s'occupera des Vues. La \autoref{fig:arboBackEnd} représente l'arborescence du \textit{back-end} de l'application.
 
-Eclipse JEE
+\begin{figure}
+	\includegraphics[scale=1]{images/arboBackEnd}
+	\caption{Arborescence du \textit{back-end} de l'outil de cartographie}
+	\label{fig:arboBackEnd}
+\end{figure}
 
-Arborescence du projet
+La structure de la partie \textit{back-end} reprend une arborescence classique de projet Java, avec les sources séparées en deux packages principaux: \textbf{main} pour les fichiers de sources et \textbf{test} pour les fichiers de tests unitaires. On peut voir la présence du fichier \textit{pom.xml} à la racine du projet et qui contient les dépendances nécessaires pour notre outil. Parmi les dépendances (voir la \autoref{sec:utilisationMaven} pour comprendre le fonctionnement), on retrouve les starters de \textit{Spring Boot} (\textit{spring-boot-starter-data-jpa}, \textit{spring-boot-starter-web}, \textit{spring-boot-starter-test}), deux dépendances pour \textit{Spring Security}, les drivers pour les connexions à la base de données (une pour notre base sous \textit{Oracle} et une pour la base du dictionnaire de données sous \textit{Informix}).
 
-Explications de la structure avec les packages
+Ensuite, dans les sources présentes dans le package \textbf{main}, les fichiers Java sont répertoriés dans un package principal \textit{com.soprabanking.cartographie}. À la racine, nous avons le fichier \textbf{main} du programme et les packages suivants : 
 
-\chapter{Gestion du job d'alimentation}
+\begin{description}
+	\item[controller] qui contient deux classes de contrôleur, une pour la partie Dictionnaire et une pour la partie Cartographie. Ce sont ces deux contrôleurs qui vont exposer les données en REST au \textit{front-end}. 
+	\item[exceptions] avec les exceptions pour certains cas de figure.
+	\item[model] avec toute la gestion des données de l'outil: les classes d'entités de \textit{Spring Data}, les \textit{repositories}, la gestion du job d'alimentation et les services \textit{Spring Data}.
+	\item[util] qui contient les classes utilitaires comme par exemple, la gestion des connexions SVN.
+\end{description}
 
+Comme expliqué, on retrouve de nombreux éléments différents dans la partie \textbf{model} qui respectent la structure suivante : 
+
+\begin{description}
+	\item[carto] contient les entités de la cartographie technique (programmes, modules 4GL, fonctions techniques, ...) et leurs \textit{repositories} respectifs permettant la gestion des données avec \textit{Spring Data}
+	\item[dico] contient les entités du dictionnaire des données (domaines, fonctions, sous-fonctions, tables, ...) et leurs \textit{repositories} respectifs permettant la gestion des données avec \textit{Spring Data}
+	\item[config] contient deux classes de configuration pour les transactions vers les bases de données.
+	\item[schedule] contient les éléments du job d'alimentation.
+	\item[xcf] contient les classes pour l'extraction du dictionnaire des programmes.
+\end{description}
+
+Les fichiers de ressources contenant les propriétés de l'application et du job d'alimentation sont contenus dans le package \textbf{main/resources}.
 
 \chapter{Exposition REST des données}
 
+Explication sur le REST
+
+
+
+\chapter{Gestion du job d'alimentation}
+
+Quartz, implémentation du schedule
+
 
 \chapter{Gestion du front-end et de la sécurité}
+
+Sécurité géré avec Spring Security
+
+Screen des écrans
+
 
 
 \chapter*{Bilan du stage}

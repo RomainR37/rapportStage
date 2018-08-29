@@ -1,313 +1,208 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\addvspace {10\p@ }
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Le progiciel Amplitude}{}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Cartographie fonctionnelle d'\textit {Amplitude}\relax }}{7}{figure.2.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Spring Boot}{}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Aper\IeC {\c c}u du site \textit {Spring Initializr}\relax }}{12}{figure.4.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces Extrait d'impl\IeC {\'e}mentation de la d\IeC {\'e}pendance parent dans le \textit {pom.xml}\relax }}{12}{figure.4.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Extrait d'impl\IeC {\'e}mentation d'une d\IeC {\'e}pendance web dans le \textit {pom.xml}\relax }}{12}{figure.4.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4}{\ignorespaces Impl\IeC {\'e}mentation du plug-in \textit {Maven}\relax }}{13}{figure.4.4}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Fonction principale d'un projet \textit {Spring Boot}\relax }}{14}{figure.4.5}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6}{\ignorespaces Fichier \textit {pom.xml} en cas de multiples fonctions principales\relax }}{14}{figure.4.6}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7}{\ignorespaces Fichier \textit {pom.xml} en cas de multiples fonctions principales\relax }}{15}{figure.4.7}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8}{\ignorespaces Exemple de d\IeC {\'e}pendances dans le \textit {pom.xml} pour la gestion d'une base de donn\IeC {\'e}es\relax }}{16}{figure.4.8}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {9}{\ignorespaces Fichier de configuration pour l'initialisation d'une base de donn\IeC {\'e}es\relax }}{16}{figure.4.9}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {10}{\ignorespaces Fichier \textit {pom.xml} d'un projet multi-module\relax }}{17}{figure.4.10}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Spring Data}{}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Exemple de repository\relax }}{20}{figure.5.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces Exemple de requ\IeC {\^e}te sp\IeC {\'e}cifi\IeC {\'e} dans un \textit {repository}\relax }}{20}{figure.5.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Exemple de requ\IeC {\^e}te modifi\IeC {\'e}e\relax }}{20}{figure.5.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4}{\ignorespaces Exposition REST d'un \textit {repository}\relax }}{21}{figure.5.4}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Angular}{}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Arborescence d'un projet \textit {Angular}\relax }}{24}{figure.6.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces S\IeC {\'e}lection des styles en Angular\relax }}{25}{figure.6.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Exemple de page format\IeC {\'e}e avec \textit {Bootstrap}\relax }}{25}{figure.6.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4}{\ignorespaces Exemple de styles utilisant \textit {PrimeNG}\relax }}{26}{figure.6.4}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Impl\IeC {\'e}mentation HTML utilisant \textit {PrimeNG}\relax }}{26}{figure.6.5}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Mod\IeC {\'e}lisation UML}{}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Extrait de la partie Cartographie Technique du diagramme d'entit\IeC {\'e}\relax }}{29}{figure.7.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces Diagramme d'activit\IeC {\'e} de l'alimentation des \IeC {\'e}l\IeC {\'e}ments de la cartographie\relax }}{30}{figure.7.2}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\select@language {english}
+\addvspace {10\p@ }
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\select@language {french}
+\addvspace {10\p@ }
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\select@language {english}
+\addvspace {10\p@ }
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\select@language {french}
+\contentsline {chapter}{\numberline {10}Outils utilis\IeC {\'e}s et arborescence du projet}{}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Arborescence du \textit {back-end} de l'outil de cartographie\relax }}{38}{figure.10.1}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {french}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
