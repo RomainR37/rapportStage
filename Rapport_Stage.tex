@@ -93,13 +93,17 @@ Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve:
 	\item Une architecture orientée client et process	
 \end{itemize}
 
-Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{Informix-4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. Par ailleurs, on appelle \textbf{module} un fichier source de 4GL (avec une extension \textit{.4gl}).
+%TODO A CHANGER voir GENERO 4GL, 4JS tout ça
+
+Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{GENERO 4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. Par ailleurs, on appelle \textbf{module} un fichier source de 4GL (avec une extension \textit{.4gl}).
 
 \textit{Amplitude} a beaucoup évolué depuis ses premières versions, avec l'ajout de nouvelles fonctionnalités et des évolutions marquantes. La dernière version stable, la v.11 nommée \textit{Amplitude Up}, ajoute par exemple de nombreuses fonctionnalités dans le domaine du digital.
 
 
 \section{Architecture générale}
 \label{sec:architectureAmplitude}
+
+%TODO A CHANGER depuis la version 11, c'est ok, les banques ont les mêmes modules
 
 L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 11.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 11.3.0 également. Néanmoins, le progiciel s'appuie sur une base de programmes commune pour chaque branche. 
 
@@ -127,7 +131,6 @@ Nous ne rentrerons pas dans le détail du fonctionnement de chacune des sources 
 
 
 \chapter{Présentation du projet}
-
 
 \section{Contexte}
 
@@ -177,7 +180,7 @@ Les programmes d'\textit{Amplitude} devront être répertoriés avec, quand cela
 
 Le projet suivra une méthode agile pour plusieurs raisons. Tout d'abord, il s'agit d'un projet en interne visant à améliorer la productivité des personnes travaillant sur \textit{Amplitude}. Il n'y a pas d'obligation de mise en production pour un client par exemple. Ensuite, le projet sera divisé en plusieurs lots, avec un lot principal qui devrait terminer à l'issue de mon stage, et de futurs lots incluant des besoins qui n'ont pas été pris en compte dans le premier lot.  
 
-Je serai la seule personne qui va travailler sur l'outil de cartographie à temps plein. Néanmoins, je vais être accompagné pendant toutes les étapes pour mon encadrant et par mes collègues lorsque certains problèmes bloquants se présenteront.
+Je serai la seule personne qui va travailler sur l'outil de cartographie à temps plein. Néanmoins, je vais être accompagné pendant toutes les étapes pour mon encadrant et par mes collègues lorsque certains problèmes bloquants se présenteront et pour la réalisation de certaines tâches plus complexes (notamment la gestion de la sécurité de l'application).
 
 
 \part{Tutoriels et formations}
@@ -378,7 +381,7 @@ Dans la partie back-end, la compilation Maven devra générer le fichier .war en
 
 Il existe également la possibilité d’utiliser les fonctionnalités de Spring Boot pour déployer son application sous forme d’un unique fichier jar contenant toutes les dépendances. Pour cela, le projet doit avoir une structure similaire à celle d’un déploiement avec Maven dans la partie précédente, c’est-à-dire un projet parent avec un fichier pom.xml qui lui est propre, et les deux projets fils avec chacun un fichier pom.xml pour son propre fonctionnement.
 
-La configuration du fichier pom.xml du projet Angular reste le même que pour un déploiement avec un .war. La différence se fera sur la configuration de la sortie des fichiers compilés. Dans le fichier package.json, dans la partie build, il faut ajouter le chemin de sortie avec la commande suivante : \javacode{ng build -prod -output-path dist/META-INF/resources}. \textit{Spring Boot} est pré-configuré pour aller chercher les éléments statiques dans ce répertoire. Ainsi, à la création du jar, toutes les dépendances seront ajoutées.
+La configuration du fichier \textit{pom.xml} du projet Angular reste le même que pour un déploiement avec un .war. La différence se fera sur la configuration de la sortie des fichiers compilés. Dans le fichier package.json, dans la partie build, il faut ajouter le chemin de sortie avec la commande suivante : \javacode{ng build -prod -output-path dist/META-INF/resources}. \textit{Spring Boot} est pré-configuré pour aller chercher les éléments statiques dans ce répertoire. Ainsi, à la création du jar, toutes les dépendances seront ajoutées.
 
 
 \chapter{Spring Data}
@@ -626,7 +629,7 @@ L’architecture du back-end sera divisée en deux parties principales : une par
 
 Plusieurs étapes sont nécessaires afin de récupérer l'intégralité des informations nécessaire à la cartographie: la création des programmes en base, la création des modules 4GL, la création des fonctions techniques, l'association des modules 4Gl et des programmes, l'association des fonctions et des programmes, l'extraction du dictionnaire des programmes et la récupération des SMG.
 
-Auparavant, il sera nécessaire de faire interagir le projet avec les versions d'\textit{Amplitude} en utilisant l'outil de versionnage SVN. Ainsi, pour chaque version d’Amplitude que l’on souhaite étudier, il faudra effectuer un \textit{checkout} d’Amplitude. C’est à partir des \textit{working copy} récupérées que l’on va effectuer les analyses et les créations d’entités en base. Il sera nécessaire par la suite d’effectuer des \textit{update} des versions lors des alimentations régulières pour observer les différences et mettre à jour les versions. 
+Auparavant, il sera nécessaire de faire interagir le projet avec les versions d'\textit{Amplitude} en utilisant l'outil de gestion de version SVN. Ainsi, pour chaque version d’Amplitude que l’on souhaite étudier, il faudra effectuer un \textit{checkout} d’Amplitude. C’est à partir des \textit{working copy} récupérées que l’on va effectuer les analyses et les créations d’entités en base. Il sera nécessaire par la suite d’effectuer des \textit{update} des versions lors des alimentations régulières pour observer les différences et mettre à jour les versions. 
 
 \subsection{Création des programmes en base}
 
@@ -740,14 +743,16 @@ Ce chapitre traite des différents outils utilisés pour le développement ainsi
 
 \section{IDE et outils de développement utilisés}
 
-Les développements du projet se sont fait avec l'éditeur \textit{Eclipse}. Il a l'avantage d'être l'un des plus complets et efficaces du marché, tout en étant open source. L'éditeur donne accès à une vaste bibliothèque d'extensions permettant d'améliorer l'efficacité du développement. Parmi ces extensions, j'ai notamment rajouté le plug-in \textit{Sonarlint} qui permet d'analyser le code et de détecter les mauvaises pratiques de développement pouvant mener à des bugs ou des ralentissements. C'est une extension pratique pour garantir une qualité de code et pour améliorer les développements en général.
+Les développements du projet se sont faits avec l'éditeur \textit{Eclipse}. Il a l'avantage d'être l'un des plus complets et efficaces du marché, tout en étant open source. L'éditeur donne accès à une vaste bibliothèque d'extensions permettant d'améliorer l'efficacité du développement. Parmi ces extensions, j'ai notamment rajouté le plug-in \textit{Sonarlint} qui permet d'analyser le code et de détecter les mauvaises pratiques de développement pouvant mener à des bugs ou des ralentissements. C'est une extension pratique pour garantir une qualité de code et pour améliorer les développements en général.
 
 Une autre extension qui va nous servir sur le projet est \textit{Angular IDE}. Il s'agit d'une extension permettant de prendre en charge les projets \textit{Angular}, ce qui va nous permette de gérer le côté Java et le côté \textit{Angular} du projet dans un seul éditeur. 
 
+
 \section{Arborescence du projet}
 
+%TODO Pattern MVVM au lieu de MVC, voir https://www.dotnetdojo.com/mvvm/
 
-Le projet est séparé en deux parties avec le \textit{back-end} d'un côté et le \textit{front-end} de l'autre. L'idée est de respecter un pattern MVC, ainsi la partie \textit{back-end} contiendra les éléments du Modèle et du Contrôleur et la partie \textit{front-end} s'occupera des Vues. La \autoref{fig:arboBackEnd} représente l'arborescence du \textit{back-end} de l'application.
+Le projet est séparé en deux parties avec le \textit{back-end} d'un côté et le \textit{front-end} de l'autre. L'idée est de respecter un pattern MVV, ainsi la partie \textit{back-end} contiendra les éléments du Modèle et du Contrôleur et la partie \textit{front-end} s'occupera des Vues. La \autoref{fig:arboBackEnd} représente l'arborescence du \textit{back-end} de l'application.
 
 \begin{figure}
 	\includegraphics[scale=1]{images/arboBackEnd}
@@ -780,6 +785,8 @@ Les fichiers de ressources contenant les propriétés de l'application et du job
 
 Du côté \textit{Angular}, la structure reprend celle d'un projet \textit{Angular} classique dont nous verrons plus de détails dans le \autoref{chap:frontEnd}.
 
+%TODO voir l'aspect package MAVEN, installation d'Angular-cli, de npm, de ng, etc.
+
 \chapter{Exposition REST des données}
 
 \section{Principe du REST}
@@ -809,24 +816,56 @@ L'implémentation du REST avec \textit{Spring Data} se fait facilement à l'aide
 	\label{fig:restController}
 \end{figure}
 
-On peut voir sur l'illustration l'annotation \javacode{@RequestMapping("/dico")} qui précède la déclaration du contrôleur ainsi que l'annotation \javacode{@RequestMapping("/domaines/\{id\}")} avant la déclaration de la méthode qui récupère un domaine selon l'identifiant. 
-
+On peut voir sur l'illustration l'annotation \javacode{@RequestMapping("/dico")} qui précède la déclaration du contrôleur ainsi que l'annotation \javacode{@RequestMapping("/domaines/\{id\}")} avant la déclaration de la méthode qui récupère un domaine selon l'identifiant. Ainsi, il est possible de retrouver les domaines que l'on souhaite par le biais de l'URL : \javacode{/dico/domaines/\{id\}}. 
 
 \chapter{Gestion du job d'alimentation}
 
-Quartz, implémentation du schedule
+
+L'un des aspects principales de l'outil est l'alimentation des différents ressources. Le processus d'alimentation doit nous permettre de récupérer les éléments de la cartographie technique, les données du dictionnaires des données nous sont déjà directement accessibles depuis la base de données. L'alimentation et la mise à jour des ressources doit se faire régulièrement, pour avoir la meilleure cartographie possible à un instant T. Nous avons choisi de l'effectuer tous les jours à minuit, pour permettre d'avoir la bonne cartographie chaque jour. 
+
+Pour la gestion du processus d'alimentation, nous avons utilisé la bibliothèque open-source \textit{Quartz}. Elle permet de programmer des processus pour qu'ils se lancent au moment que l'on souhaite. La mise en place d'un job se fait avec à minima deux fichiers : un décrivant le job et l'autre contenant les configurations. Le fichier qui décrit le processus à accomplir doit implémenter l'interface \textit{Job} de la bibliothèque \textit{Quartz}. Ensuite la classe doit avoir une méthode \javacode{execute()} qui indique les traitements à effectuer. La configuration du job se trouve dans une classe qui précise les détails du job et qui met en place le déclencheur du processus (le \textit{trigger}). 
+
+Pour notre outil de cartographie, le job va appeler les méthodes de récupération d'\textit{Amplitude} avec SVN et d'alimentation des données par la suite. La \autoref{fig:serviceJob} représente l'implémentation dans la classe \textit{AlimentationCartoService} de l'appel aux méthodes d'alimentation.
+
+
+\begin{figure}
+	\includegraphics[scale=0.7]{images/serviceJob}
+	\caption{Implémentation des méthodes d'alimentation}
+	\label{fig:serviceJob}
+\end{figure}
+
+Comme on le voit sur l'image, les méthodes appelées sont les suivantes :
+
+\begin{itemize}
+	\item Des appels à la méthode \textit{svnCall()} pour récupérer les outils de développement d'\textit{Amplitude} (pour utiliser le script python pour la récupération des fonctions techniques notamment;
+	\item Un appel à la méthode \textit{svnCall()} pour récupérer les sources \textit{Amplitude} pour la version indiquée en paramètre;
+	\item Un appel à la fonction de création des programmes;
+	\item Un appel à la fonction de création des modules 4GL;
+	\item Un appel à la fonction de créations des fonctions techniques;
+	\item Un appel à la fonction d'associations des programmes et des modules 4GL;
+	\item Un appel à la fonction d'extraction du dictionnaire des programmes;
+	\item Un appel à la fonction de récupération des SMG.
+\end{itemize}
+
+La fonction \javacode{svnCall()} effectue un \textit{checkout} des sources dans le cas où il s'agit de la première alimentation ou un \textit{update} dans le cas où les sources sont déjà présentes. 
+
+Les méthodes sont appelées une à une de façon séquentielle. La question du multi-threading s'est posée pour améliorer les temps de traitements. En effet, la création initiale des entités en base peut prendre beaucoup de temps. La création des programmes et des modules se fait relativement rapidement tandis que la création des fonctions prend à l'heure actuelle, un temps qui n'est pas concevable pour une mise en production (aux alentours de 10 heures de traitement). Cela est dû à l'utilisation du script Python \textit{check\_func\_xl.py} qui nécessiterait une amélioration et au fait que chaque programme lance une instance de Python avec une exécution de script. Ainsi, nous avons mis en place un multi-thread sur ces traitements, ce qui permet de prendre en charge plusieurs scripts en simultané. 
 
 
 \chapter{Gestion du front-end et de la sécurité}
 \label{chap:frontEnd}
 
-L'outil final pourrait être accessible à de nombreuses personnes au sein de l'entreprise une fois la mise en production. La nécessité de sécuriser la plate-forme est d'abord présente étant donné qu'il est possible de manipuler des données faisant parties intégrantes de la cartographie. Une modification même minime sur les données pourrait entraîner des problèmes, notamment si cela touche des données associées avec d'autres.
+La partie \textit{front-end} et la gestion de la sécurité a été pris en charge par les architectes. Je ne vais donc pas rentrer dans les détails des implémentations mais plutôt évoquer le fonctionnement général de ces aspects.
 
+\section{Gestion de la sécurité}
 
-Sécurité géré avec Spring Security
+L'outil final pourrait être accessible à de nombreuses personnes au sein de l'entreprise une fois la mise en production. La nécessité de sécuriser la plate-forme est présente étant donné qu'il est possible de manipuler des données faisant parties intégrantes de la cartographie. Une modification même minime sur les données pourrait entraîner des problèmes, notamment si cela touche des données associées avec plusieurs entités.
+
+Les authentifications à la plateforme sont gérées avec le framework \textit{oauth2}. C'est un framework qui permet de limiter les accès d'un compte sur les services HTTP. Il est utilisé par de nombreux sites réputés comme \textit{Facebook} ou \textit{Github}. L'utilisation du framework sur notre application est gérée automatiquement par \textit{Spring Security}. La gestion des authentifications à l'aide de jetons attribués à un compte une fois celui-ci connecté. 
 
 On peut voir dans la \autoref{fig:restController} dans le chapitre précédent la présence de l'annotation \javacode{@PreAuthorize("isAuthentificated()")}. Celle-ci permet de refuser l'accès à la méthode si le visiteur ne s'est pas authentifié au préalable. 
 
+\section{Aperçu de l'affichage}
 
 \begin{figure}
 	\includegraphics[scale=0.8]{images/cartoLogin}
@@ -836,7 +875,7 @@ On peut voir dans la \autoref{fig:restController} dans le chapitre précédent l
 
 
 \begin{figure}
-	\includegraphics[scale=0.45]{images/cartoAccueil}
+	\includegraphics[scale=0.33]{images/cartoAccueil}
 	\caption{Page d'accueil de l'outil de cartographie}
 	\label{fig:cartoAccueil}
 \end{figure}
@@ -844,6 +883,10 @@ On peut voir dans la \autoref{fig:restController} dans le chapitre précédent l
 
 \chapter*{Bilan du stage}
 
+
+Etat du projet 
+
+Bilan personnel
 
 Remerciement
 
@@ -854,7 +897,7 @@ Remerciement
 \label{ann:diagClasse}
 
 \begin{landscape}
-	\includegraphics[scale=0.4]{images/CartoV3}
+	\includegraphics[scale=0.37]{images/CartoV3}
 \end{landscape}
 
 \end{document}
