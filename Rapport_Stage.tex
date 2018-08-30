@@ -12,13 +12,13 @@
 
 \company[images/logoSopra]{Sopra Banking}{47 rue Christiaan Huygens \\ 37073 Tours Cedex 2 - France}{www.soprabanking.com}
 
-\resume{}
+\resume{Le stage de cinquième année d'école d'ingénieur est la dernière expérience avant l'entrée dans la vie active. Mon stage consiste en la mise en place d'un outil de cartographie pour le progiciel bancaire \textit{Amplitude} développé par l'entreprise \textit{Sopra Banking Software}. Le progiciel étant très vaste et complexe à manipuler, la mise en place d'une cartographie permettrait d'améliorer considérablement le quotidien des architectes fonctionnels. L'outil sera une plateforme interne à l'entreprise développée avec des technologies récentes comme \textit{Spring Boot}, \textit{Spring Data} ou encore \textit{Angular}.}
 
-\motcle{}
+\motcle{stage, outil, cartographie, spring boot, spring data, angular}
 
-\abstract{}
+\abstract{The internship of the fifth year in engineering school is the last experience before the entrance in the working life. My internship consists in the built of a tool designed for mapping the software package \textit{Amplitude} developped by \textit{Sopra Banking Software}. The software has a very wide range of different fiels, making a map of it would improve the everyday life of the developpers. The tool will be a intern platform for the company developped with new technologies like \textit{Spring Boot}, \textit{Spring Data} or \textit{Angular}.}
 
-\keyword{}
+\keyword{internship, tool, mapping, spring boot, spring data, angular}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,9 +93,7 @@ Parmi les avantages listées sur le site de \textit{Sopra Banking}, on retrouve:
 	\item Une architecture orientée client et process	
 \end{itemize}
 
-%TODO A CHANGER voir GENERO 4GL, 4JS tout ça
-
-Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{GENERO 4GL}. Il s'agit d'un langage propriétaire développé par la société \textit{Informix} au milieu des années 80. Le langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. Sa particularité réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. Par ailleurs, on appelle \textbf{module} un fichier source de 4GL (avec une extension \textit{.4gl}).
+Les premières mises en production d'\textit{Amplitude} datent du début des années 90. Le progiciel est basé sur le langage de programmation \textit{GENERO 4GL}. Il s'agit d'un langage propriétaire dérivé du \textit{Informix 4GL} développé par la société \textit{Informix} au milieu des années 80. Ce langage appartient aujourd'hui à \textit{IBM} depuis le rachat d'\textit{Informix} en 2005. De son côté, le \textit{Genero 4GL} est maintenu par \textit{4Js} et intègre de nombreux éléments graphiques \textit{Windows}. La particularité du \textit{4GL} réside dans le fait qu'il a été conçu pour communiquer avec des bases de données. De ce fait, il est similaire au langage SQL. Par ailleurs, on appelle \textbf{module} un fichier source de 4GL (avec une extension \textit{.4gl}).
 
 \textit{Amplitude} a beaucoup évolué depuis ses premières versions, avec l'ajout de nouvelles fonctionnalités et des évolutions marquantes. La dernière version stable, la v.11 nommée \textit{Amplitude Up}, ajoute par exemple de nombreuses fonctionnalités dans le domaine du digital.
 
@@ -103,9 +101,7 @@ Les premières mises en production d'\textit{Amplitude} datent du début des ann
 \section{Architecture générale}
 \label{sec:architectureAmplitude}
 
-%TODO A CHANGER depuis la version 11, c'est ok, les banques ont les mêmes modules
-
-L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 11.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 11.3.0 également. Néanmoins, le progiciel s'appuie sur une base de programmes commune pour chaque branche. 
+L'architecture d'\textit{Amplitude} repose sur de nombreux programmes et modules qui communiquent entre eux. La complexité de la structure réside principalement dans le fait que chaque client ne dispose pas forcément des mêmes fonctionnalités car les demandes et les ajustements diffèrent pour chaque établissement. Par exemple, un banque A disposant d'une version 9.3.0 d'\textit{Amplitude} aura des ajustements différents d'une banque B avec une version 9.3.0 également. Néanmoins, depuis la version 11 d'\textit{Amplitude}, le progiciel s'appuie sur une base de programmes commune à chaque branche. 
 
 D'un point de vue conceptuel, les différentes fonctions présentes dans le progiciel ont été cartographiées et répertoriées sous différentes entités. La \autoref{fig:carto} représente un aperçu de la cartographie fonctionnel d'\textit{Amplitude}. Pour comprendre un peu mieux cette cartographie, nous pouvons prendre un exemple. La fonction "Chèques" fait partie du domaine "Opérations". Et la fonction "Chèques" contient elle-même des sous-fonctions, et ainsi de suite. L'ensemble des données cartographiées est visible sur le dictionnaire des données, qui sera présenté plus tard dans le rapport. 
 
@@ -750,9 +746,7 @@ Une autre extension qui va nous servir sur le projet est \textit{Angular IDE}. I
 
 \section{Arborescence du projet}
 
-%TODO Pattern MVVM au lieu de MVC, voir https://www.dotnetdojo.com/mvvm/
-
-Le projet est séparé en deux parties avec le \textit{back-end} d'un côté et le \textit{front-end} de l'autre. L'idée est de respecter un pattern MVV, ainsi la partie \textit{back-end} contiendra les éléments du Modèle et du Contrôleur et la partie \textit{front-end} s'occupera des Vues. La \autoref{fig:arboBackEnd} représente l'arborescence du \textit{back-end} de l'application.
+Le projet est séparé en deux parties avec le \textit{back-end} d'un côté et le \textit{front-end} de l'autre. L'idée est de respecter un pattern MVVM (Modèle - Vue - Vue/Modèle). Il s'agit d'un design pattern permettant de faciliter la mise en place d'interface graphique. Il a spécialement été conçu pour améliorer la séparation entre les données et la vue qui les affichent. Le lien entre la vue et le modèle de données est fait par des mécanismes de liaison dynamique. Ainsi la partie \textit{back-end} contiendra les éléments du Modèle et du lien entre Modèle et Vues, et la partie \textit{front-end} s'occupera des Vues. La \autoref{fig:arboBackEnd} représente l'arborescence du \textit{back-end} de l'application.
 
 \begin{figure}
 	\includegraphics[scale=1]{images/arboBackEnd}
@@ -785,7 +779,7 @@ Les fichiers de ressources contenant les propriétés de l'application et du job
 
 Du côté \textit{Angular}, la structure reprend celle d'un projet \textit{Angular} classique dont nous verrons plus de détails dans le \autoref{chap:frontEnd}.
 
-%TODO voir l'aspect package MAVEN, installation d'Angular-cli, de npm, de ng, etc.
+L'empaquetage de l'application se fait par \textit{Maven}. Nous avons donc un projet parent et deux projets fils, le tout relié par \textit{Maven}. Le côté \textit{back-end} se comporte comme un projet \textit{Maven} classique, tandis que le côté \textit{front-end}, lors de son déploiement, installe au préalable les dépendances et les outils nécessaires au fonctionnement d'\textit{Angular} (\textit{Angular-cli}, \textit{npm}, \textit{ng}, tous les éléments détaillés dans le \autoref{chap:angular}). Ainsi, au déploiement de l'application, les deux sous-projets sont déployés chacun de leur côté. 
 
 \chapter{Exposition REST des données}
 
@@ -863,9 +857,11 @@ L'outil final pourrait être accessible à de nombreuses personnes au sein de l'
 
 Les authentifications à la plateforme sont gérées avec le framework \textit{oauth2}. C'est un framework qui permet de limiter les accès d'un compte sur les services HTTP. Il est utilisé par de nombreux sites réputés comme \textit{Facebook} ou \textit{Github}. L'utilisation du framework sur notre application est gérée automatiquement par \textit{Spring Security}. La gestion des authentifications à l'aide de jetons attribués à un compte une fois celui-ci connecté. 
 
-On peut voir dans la \autoref{fig:restController} dans le chapitre précédent la présence de l'annotation \javacode{@PreAuthorize("isAuthentificated()")}. Celle-ci permet de refuser l'accès à la méthode si le visiteur ne s'est pas authentifié au préalable. 
+On peut voir sur la \autoref{fig:restController} dans le chapitre précédent la présence de l'annotation \javacode{@PreAuthorize("isAuthentificated()")}. Celle-ci permet de refuser l'accès à la méthode si le visiteur ne s'est pas authentifié au préalable. 
 
 \section{Aperçu de l'affichage}
+
+Les deux images suivantes montrent un aperçu du rendu de l'outil de cartographie. La première page que l'on trouve lorsque l'on souhaite utiliser l'outil est la \autoref{fig:cartoLogin}, la page d'authentification. Une fois authentifié, nous arrivons sur la page d'accueil de l'application que l'on peut voir sur la \autoref{fig:cartoAccueil}. L'aperçu de la page d'accueil ici est provisoire, néanmoins la structure finale sera la même, à savoir un aperçu des domaines de la cartographie fonctionnelle. Un clic sur une tuile représentant un domaine permet d'avoir un visuel du contenu de l'entité. 
 
 \begin{figure}
 	\includegraphics[scale=0.8]{images/cartoLogin}
@@ -880,16 +876,18 @@ On peut voir dans la \autoref{fig:restController} dans le chapitre précédent l
 	\label{fig:cartoAccueil}
 \end{figure}
 
+Parmi les autres éléments notables de la page d'accueil, on peut retrouver les onglets \textit{Recherche}, \textit{Statistiques} et \textit{Habilitations}. L'onglet de recherche, comme son nom l'indique, permet de rechercher un élément que l'on souhaite analyser. L'onglet \textit{Statistiques} va regrouper différentes informations générales comme les fonctions inutilisées, les modules les plus utilisés, etc.. Les habilitations seront accessibles uniquement pour les administrateurs de l'outil. 
+
+Ces éléments ne sont pas encore intégrés et seront les prochaines étapes de développement dans le futur. 
 
 \chapter*{Bilan du stage}
 
 
-Etat du projet 
+À l'heure où s'achève mon stage, le moment est venu de dresser le bilan de ces derniers mois. Dans un premier temps, concernant l'état du projet à l'issue du stage, nous avons respecté les délais fixés par les chiffrages de développement. Après l'analyse de l'expression des besoins, nous savions que les temps pour finir intégralement seraient très courts et qu'il serait quasiment impossible de terminer l'outil à la fin du mois d'août. Néanmoins, notre objectif était d'avoir au moins la partie \textit{back-end} de l'application fonctionnelle, ce qui est le cas. Des améliorations sont cependant encore nécessaires, notamment en ce qui concerne les temps de traitement pour l'alimentation des données.
 
-Bilan personnel
+D'un point de vue personnel, ce stage a été pour moi l'expérience professionnelle la plus enrichissante que j'ai connu, et de loin, et cela pour plusieurs raisons. Tout d'abord, ça a été la première fois pour moi d'être intégré dans un projet à plein temps sur une période aussi longue. Ensuite, le sujet était particulièrement complet et m'a permis de voir de toucher à de nombreux aspects de la vie d'un ingénieur. Commencer par comprendre les besoins du "client" pour ensuite modéliser une solution qui convient avant de la mettre en œuvre était vraiment intéressant. La variété aussi bien des tâches à accomplir que des technologies utilisées a fait que je n'ai jamais ressenti de moments d'ennui ou de lassitude pendant le stage, ce qui peut parfois arriver pour certains étudiants-ingénieurs.
 
-Remerciement
-
+Pour conclure, je tiens à remercier mon encadrant, M. Alexandre DURAND, qui m'a fait confiance dès le passage des portes de \textit{Sopra Banking Sotware} lors de mon premier entretien jusqu'à mes derniers jours de stage et même dans un futur proche en me proposant un contrat de travail. J'espère pouvoir ainsi terminer cet outil de cartographie et qu'il soit utile au plus grand nombre dans l'entreprise. Je voudrais ensuite remercier mes collègues pour l'intégration dans la cellule dès les premiers jours, pour la bonne ambiance qui règne au quotidien et pour leurs humours à toute épreuve ! Et enfin merci à Polytech pour ses années d'étude qui vont me permettre de rentrer dans la vie active de la meilleure des façons.
 
 \appendix
 
