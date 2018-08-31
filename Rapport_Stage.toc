@@ -1,6 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Liste des intervenants}{a}{chapter*.1}
 \defcounter {refsection}{0}\relax 
@@ -31,22 +30,14 @@
 \contentsline {section}{\numberline {1}Pr\IeC {\'e}sentation}{6}{section.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Architecture g\IeC {\'e}n\IeC {\'e}rale}{6}{section.2.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Pr\IeC {\'e}sentation du projet}{9}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -55,10 +46,8 @@
 \contentsline {section}{\numberline {2}Expression du besoin}{9}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Description des exigences}{10}{section.3.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Gestion de projet}{10}{section.3.4}
 \defcounter {refsection}{0}\relax 
@@ -67,154 +56,96 @@
 \contentsline {chapter}{\numberline {4}Spring Boot}{12}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Cr\IeC {\'e}ation d'un projet avec \textit {Spring Initializr}}{12}{section.4.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Utilisation avec \textit {Maven}}{13}{section.4.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}\IeC {\'E}l\IeC {\'e}ments \IeC {\`a} ajouter dans le programme}{14}{section.4.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Exemple d'application web avec \textit {Spring Boot}}{15}{section.4.4}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Gestion de base de donn\IeC {\'e}es}{16}{section.4.5}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}D\IeC {\'e}ploiement d'une application \textit {Spring Boot} x \textit {Angular}}{17}{section.4.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}D\IeC {\'e}ployer les parties s\IeC {\'e}par\IeC {\'e}ment}{18}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2}D\IeC {\'e}ploiement sous forme de \textit {.war} avec \textit {Maven}}{18}{subsection.4.6.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3}D\IeC {\'e}ploiement sous forme de \textit {.jar} en utilisant \textit {Spring Boot}}{19}{subsection.4.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Spring Data}{20}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Fonctionnement de base de \textit {Spring Data} et de \textit {Spring Data JPA}}{20}{section.5.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Fonctionnement de \textit {Spring Data REST}}{21}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Configuration avec \textit {Spring Boot} et \textit {Spring Data JPA}}{22}{section.5.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Angular}{23}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Installations n\IeC {\'e}cessaires}{23}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Node.js, npm et Angular CLI}{23}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {1.1}\textit {Node.js}, \textit {npm} et \textit {Angular CLI}}{23}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Quelques IDE int\IeC {\'e}ressants pour le d\IeC {\'e}veloppement Angular}{24}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {1.2}Quelques IDE int\IeC {\'e}ressants pour le d\IeC {\'e}veloppement \textit {Angular}}{24}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.1}Angular IDE}{24}{subsubsection.6.1.2.1}
 \defcounter {refsection}{0}\relax 
@@ -222,77 +153,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.3}\IeC {\'E}diteur en ligne: \textit {Stackblitz}}{24}{subsubsection.6.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Structure d'un projet Angular}{24}{section.6.2}
+\contentsline {section}{\numberline {2}Structure d'un projet \textit {Angular}}{24}{section.6.2}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Gestion des styles: \textit {Bootstrap} et \textit {PrimeNG}}{26}{section.6.3}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\contentsline {section}{\numberline {3}Gestion des styles: \textit {Bootstrap} et \textit {PrimeNG}}{25}{section.6.3}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}\textit {Bootstrap}}{26}{subsection.6.3.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}\textit {PrimeNG}}{27}{subsection.6.3.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{III\hspace {1em}Mod\IeC {\'e}lisation de l'outil et chiffrage du projet}{28}{part.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Mod\IeC {\'e}lisation UML}{29}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Diagramme d'entit\IeC {\'e}}{29}{section.7.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Diagramme d'activit\IeC {\'e}}{30}{section.7.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Sp\IeC {\'e}cifications de l'outil de cartographie}{32}{chapter.8}
 \defcounter {refsection}{0}\relax 
@@ -301,10 +204,8 @@
 \contentsline {section}{\numberline {2}Alimentation de la base}{33}{section.8.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Cr\IeC {\'e}ation des programmes en base}{33}{subsection.8.2.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Cr\IeC {\'e}ation des modules 4GL en base}{33}{subsection.8.2.2}
 \defcounter {refsection}{0}\relax 
@@ -321,121 +222,75 @@
 \contentsline {chapter}{\numberline {9}Chiffrage du projet}{35}{chapter.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{IV\hspace {1em}D\IeC {\'e}veloppement de l'outil}{37}{part.4}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Outils utilis\IeC {\'e}s et arborescence du projet}{38}{chapter.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}IDE et outils de d\IeC {\'e}veloppement utilis\IeC {\'e}s}{38}{section.10.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Arborescence du projet}{38}{section.10.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Exposition REST des donn\IeC {\'e}es}{41}{chapter.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Principe du REST}{41}{section.11.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Impl\IeC {\'e}mentation avec \textit {Spring Data}}{41}{section.11.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {12}Gestion du job d'alimentation}{43}{chapter.12}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {13}Gestion du front-end et de la s\IeC {\'e}curit\IeC {\'e}}{45}{chapter.13}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Gestion de la s\IeC {\'e}curit\IeC {\'e}}{45}{section.13.1}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Aper\IeC {\c c}u de l'affichage}{45}{section.13.2}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bilan du stage}{47}{chapter*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{Annexes}{48}{part*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Diagramme de classe}{49}{appendix.A}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {french}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {french}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
