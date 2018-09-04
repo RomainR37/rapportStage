@@ -1,12 +1,6 @@
 \select@language {french}
-\beamer@sectionintoc {2}{Contexte}{4}{0}{1}
-\beamer@subsectionintoc {2}{1}{Contexte g\IeC {\'e}n\IeC {\'e}ral}{5}{0}{1}
-\beamer@subsectionintoc {2}{2}{Objectifs}{8}{0}{1}
-\beamer@sectionintoc {3}{\'{E}tat de l'art}{9}{0}{2}
-\beamer@subsectionintoc {3}{1}{Principe g\IeC {\'e}n\IeC {\'e}ral du streaming}{10}{0}{2}
-\beamer@subsectionintoc {3}{2}{Les protocoles de communication}{12}{0}{2}
-\beamer@subsectionintoc {3}{3}{Les librairies et outils d'acquisition}{17}{0}{2}
-\beamer@sectionintoc {4}{Description G\IeC {\'e}n\IeC {\'e}rale}{20}{0}{3}
-\beamer@subsectionintoc {4}{1}{Environnement}{21}{0}{3}
-\beamer@subsectionintoc {4}{2}{Fonctionnalit\IeC {\'e}s du syst\IeC {\`e}me}{22}{0}{3}
-\beamer@subsectionintoc {4}{3}{Structure g\IeC {\'e}n\IeC {\'e}rale}{23}{0}{3}
+\beamer@sectionintoc {1}{Pr\IeC {\'e}sentation de l'entreprise}{4}{0}{1}
+\beamer@sectionintoc {2}{Pr\IeC {\'e}sentation du sujet}{10}{0}{2}
+\beamer@sectionintoc {3}{Technologies utilis\IeC {\'e}es}{14}{0}{3}
+\beamer@sectionintoc {4}{Mod\IeC {\'e}lisation de l'outil}{18}{0}{4}
+\beamer@sectionintoc {5}{D\IeC {\'e}veloppement de l'outil}{20}{0}{5}

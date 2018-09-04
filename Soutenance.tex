@@ -1,58 +1,42 @@
 \documentclass{beamer}
 
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
 
-\usepackage[utf8]{inputenc} 
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{graphicx}
-\usepackage[french]{babel}
+\usetheme{Frankfurt}
 
-\usetheme{Warsaw}
-
-\addtobeamertemplate{navigation symbols}{\usebeamerfont{footline}%
-	\usebeamercolor[fg]{footline}%
-	\hspace{1em}%
-	\insertframenumber/\inserttotalframenumber}
-
-\begin{document}
-
-\AtBeginSection[]{
-	
-	\begin{frame}
-	
-	\frametitle{Sommaire}
-	
-	\tableofcontents[currentsection]
-	
-	\end{frame} 
-
-}
-
-
-\title[]{}
-\subtitle{Première soutenance de PR\&D}
+\title{Réalisation d'un outil de cartographie sur le progiciel Amplitude}
 \author{Romain ROUSSEAU}
-\institute{Polytech Tours}
+\institute{Sopra Banking Software}
 \date{\today}
 
-\begin{frame}
+
+\begin{document}
 	
-	\maketitle
+	\logo{\includegraphics[height=1cm]{images/logoSopra}}
 	
+\begin{frame}[plain]
+	\titlepage
 \end{frame}
 
-
-
-\section*{Introduction}
-
-
+\AtBeginSection[]
+{
 \begin{frame}
+	
+	\tableofcontents[currentsection, hideallsubsections]
+	
+\end{frame} 
+}
 
+\logo{images/logoSopra}	
+
+
+\begin{frame}[plain]
 \frametitle{Introduction}
 
-Projet Recherche \& Développement consacré à l'étude et à la mise en place d'une plateforme d'acquisition de flux de TV Web.
-
-Initié par Jordan NICOT, ancien élève de Polytech Tours, qui a effectué son projet libre à ce sujet.
+Stage du 9 avril au 31 août 2018.
+\bigbreak
+Cellule Architecture de \textit{Sopra Banking Software} à Tours.
 
 \end{frame}
 
@@ -63,243 +47,183 @@ Initié par Jordan NICOT, ancien élève de Polytech Tours, qui a effectué son 
 
 \tableofcontents
 
-
 \end{frame}
 
-
-%------------------------
-
-\section{Contexte}
-
-\subsection{Contexte général}
-
-\begin{frame}	
-
-\frametitle{Contexte général}
-
-La diffusion de contenu audio et vidéo représente plus de 75\% du trafic actuel sur Internet.
-
-Atteindra plus de 80\% à l'horizon 2021. (Source Cisco, 2017)
-
-\end{frame}
-
-\begin{frame}	
-
-\frametitle{Contexte général}
-
-Les grands groupes de l'audio-visuel disposent déjà de plateforme proposant du contenu en direct.
-
-
-\end{frame}
-
-
-\begin{frame}	
-
-\frametitle{Contexte général}
-
-L'analyse temps réel de flux fait l'objet d'enjeux majeurs et peut être utilisé dans de nombreux domaines.
-
-\begin{itemize}
-	\item La propriété intellectuelle
-	\item La recommandation de vidéo
-	\item Le contrôle des vidéos, pour la publicité par exemple
-	\item et bien d'autres...
-\end{itemize}
-
-\end{frame}
-
-
-\subsection{Objectifs}
-
-\begin{frame}	
-
-\frametitle{Objectifs}
-
-L'objectif, à la fin du projet, est d'avoir une plateforme d'acquisition de flux en ligne qui peut afficher les différents flux sélectionnés.
-
-Par la suite, afficher différentes informations concernant les flux affichés (nombre d'images par seconde, débit, etc.).
-
-
-\end{frame}
-
-
-%-------------------------------
-
-\section{\'{E}tat de l'art}
-
-\subsection{Principe général du streaming}
-
-
-\begin{frame}	
-\frametitle{Principe général du \textit{streaming}}
-
-Le terme \textit{Streaming} est tiré de l'anglais \textit{stream} signifiant flot ou courant en français. Ce terme désigne aujourd'hui la diffusion en continu sur Internet de contenus audio-visuels.
-
-Nous nous intéresserons uniquement aux flux vidéos par la suite (bien que les autres flux fonctionnent de manière similaire).
-
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{Lecture progressive vs Lecture en continu}
-
-Les données sont mises à disposition sur un serveur et pour récupérer ses informations, le client envoie une requête et récupère le flux envoyé.
-
-\begin{description}
-	\item[Lecture progressive] La vidéo est chargée, les données sont mises en cache par le client et la vidéo commence lorsqu'il y a assez de données en cache pour la commencer. On la retrouve pour le visionnage de vidéos Youtube par exemple.
-	\item[Lecture en continu] Le contenu est diffusé au même rythme que la lecture. Le fichier envoyé par le serveur n'a pas de début et de fin définis.
-\end{description}
-
-
-\end{frame}
-
-
-\subsection{Les protocoles de communication}
-
-\begin{frame}	
-\frametitle{Les protocoles de communication}
-
-Il existe de nombreux protocoles pour transférer des flux de données en direct.
-
-\begin{itemize}
-	\item HTTP
-	\item RTSP et RTSP 2.0
-	\item RTMP
-	\item MPEG-DASH, HLS, HDS, etc.
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{HTTP}
-
-Protocole de communication réputé, standardisé en 1996, à la base de l'Internet moderne.
-
-C'est le protocole le plus utilisé pour envoyer des données média à travers Internet, et d'autant plus avec l'arrivée et la démocratisation de HTML5.
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{RTSP et RTSP 2.0}
-
-RTSP est un protocole pionnier de la diffusion en continu. Il a été standardisé en 1998.
-Utilise les protocoles de transport RTP et RTCP pour transmettre les données.
-
-Devenu obsolète et remplacé par sa version 2.0 en 2016.
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{RTMP}
-
-Protocole propriétaire développé par Macromedia (racheté par Adobe Systems) en 2005, il était le protocole dominant lors des années 2000. 
-
-Utilise le client \textit{Flash Player} pour fonctionner.
-
-Aujourd'hui au bord de la disparition avec l'abandon de \textit{Flash Player}.
-
-\end{frame}
-
-
-\begin{frame}	
-\frametitle{MPEG-DASH, HLS et les nouveaux protocoles basés sur HTTP}
-
-MPEG-DASH, développé par le groupe MPEG, fait partie des protocoles les plus populaires. Il est basé sur HTTP et est standardisé en 2012. 
-
-Dans le même style, on a HLS, développé par Apple, utilisé sur les plateformes comme \textit{MyCanal}.
-
-Ces protocoles gèrent le \textit{streaming} adaptatif.
-
-\end{frame}
-
-\subsection{Les librairies et outils d'acquisition}
-
-
-\begin{frame}	
-\frametitle{Les outils et librairies d'acquisition}
-
-Il existe de nombreux outils et librairies permettant d'acquérir et de traiter des flux TV. Nous allons en voir deux: FFMPEG et VLC.
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{FFMPEG}
-
-
-Ensemble de logiciels pour la gestion multimédia. Composé de 4 logiciels principaux: 
-
-\begin{description}
-	\item[ffmpeg] outil pour convertir des fichiers multimédia
-	\item[ffserver] serveur pour la diffusion en ligne
-	\item[ffplay] lecteur multimédia
-	\item[ffprobe] outil d'analyse de flux multimédia.
-\end{description}
-
-
-Propose également des librairies à destination des développeurs.
-
-\end{frame}
-
-\begin{frame}	
-\frametitle{libVLC}
-
-
-Librairie initiée par la \textit{VideoLAN Organization}, qui est à l'origine du lecteur multimédia VLC.
-
-
-\end{frame}
-
-
-\section{Description Générale}
-
-\subsection{Environnement}
+\section{Présentation de l'entreprise}
 
 \begin{frame}
-\frametitle{Environnement du projet}
+\frametitle{Le groupe \textit{Sopra Steria}}
 
-Ce projet sera testé sur les salles machines de l'école et branché sur le réseau de l'université.
+\begin{block}{Deux entités distinctes:}
+	\begin{description}
+		\item[Sopra] : créée en 1968, développement de logiciels dans le domaine bancaire et de la RH
+		\item[Steria] : créée en 1969, SSII travaillant dans le secteur public
+	\end{description}
+\end{block}
+
+\bigbreak 
+
+Fusion des deux structures en 2015 pour former le groupe \textit{Sopra Steria}.
+
+\bigbreak
+
+Chiffre d'affaire de 3,8 milliard d'euros en 2017.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\textit{Sopra Banking Software}}
+
+Filiale du groupe \textit{Sopra Steria} créée en 2012 suite à de nombreux rachats de société (dont le groupe \textit{Delta Informatique}).
+
+\bigbreak
+
+Fournisseur de solutions globales : progiciels bancaires, services d'intégration, support, conseil... 
+
+\bigbreak
+
+800 banques dans 70 pays (Europe, Afrique et Moyen-Orient principalement)
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Le progiciel \textit{Amplitude}}
+
+\textit{Amplitude}, solution de \textit{core banking} proposée pour traiter de manière intégrée toutes les problématiques bancaires.
+
+\bigbreak
+
+Première mise en production dans les années 90, initié par \textit{Delta Informatique}.
+
+\bigbreak
+
+Progiciel développé en langage Genero 4GL, aujourd'hui en version 11 (appelé \textit{Amplitude Up})
+
+\end{frame}
+
+\begin{frame}[plain]
+\frametitle{Architecture d'\textit{Amplitude}}
+
+\begin{center}
+	\includegraphics[width=11cm]{images/Cartographie_fonctionnelle}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Arborescence d'\textit{Amplitude}}
+
+\begin{description}
+	\item[BaseProg] : liste des fichiers \textbf{BaseProg}. Ceux-ci répertorient les modules utilisés pour un programme donnée.
+	\item[base\_ref] : schéma de référence \textit{Amplitude}, sert principalement à la compilation
+	\item[bin] : liste des sources binaires
+	\item[migration] : liste des scripts permettant de gérer les migrations de serveur
+	\item[src] : répertoires sources 4gl et \textit{per} (les écrans) organisés par module
+	\item[xcf] : liste des services métiers génériques (SMG) disponibles
+	\item[xsd] : fichiers \textit{xsd} nécessaires au produit.
+\end{description}
+
+\end{frame}
+
+\section{Présentation du sujet}
+
+\begin{frame}
+\frametitle{Contexte du stage}
+
+Demande effectuée par les architectes fonctionnels :
+
+\begin{itemize}
+	\item Maîtriser l’évolution du modèle de données \textit{Amplitude},
+	\item Orienter l’analyste,
+	\item Valider que les solutions proposées par l’analyste respectent bien les règles et principes d’architecture fonctionnelles et techniques du produit \textit{Amplitude}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Expressions des besoins}
+
+\begin{itemize}
+	\item Dictionnaire des flux, interfaces et éditions
+	\item Analyse et alerte sur les impacts développements
+	\item Visualisation de la cartographie
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Déroulement du stage}
+
+Tutoriels et mise à niveau (mois d'Avril)\\
+Modélisation de l'outil (mai jusqu'à début juin)\\
+Développement (de juin à août)
+
+\end{frame}
+
+\section{Technologies utilisées}
+
+\begin{frame}
+\frametitle{Spring Boot}
+
+Framework facilitant la création d'application utilisant \textit{Spring} en automatisant ses configurations.
+
+\begin{itemize}
+	\item Proposer des solutions rapides et accessibles pour les développements \textit{Spring} ;
+	\item Faciliter les configurations, même lorsque les paramètres souhaités diffèrent de ceux utilisés par défaut ;
+	\item Proposer une panoplie d'options non-fonctionnelles (comme des serveurs embarqués \textit{Tomcat}, des options de sécurité, de mesures de performances, etc.) .
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Spring Data}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Angular}
+
+\end{frame}
+
+\section{Modélisation de l'outil}
+
+\begin{frame}
+\frametitle{}
 
 
 \end{frame}
 
+\section{Développement de l'outil}
 
-\subsection{Fonctionnalités du système}
-
-\begin{frame}	
-\frametitle{Fonctionnalités du système}
-	
-	
-\end{frame}
-
-
-\subsection{Structure générale}
-
-\begin{frame}	
-\frametitle{Structure générale}
-
+\begin{frame}
+\frametitle{Exposition des données en REST}
 
 \end{frame}
 
-\begin{frame}	
+\begin{frame}
+\frametitle{Gestion du job}
+
+Quartz
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Gestion du front-end et de la sécurité}
 
-\section*{Bilan et conclusion}
-
-\begin{frame}	
-\frametitle{Bilan et conclusion}
-
-
-Nous avons une idée de l'architecture et de la mise en place, mais un problème reste en suspens: où et comment récupérer les flux TV ? 
-
-
-Conception détaillée prévue mi-janvier, et premier livrable prévu fin-février au plus tard.
-
-
+oauth2
 
 \end{frame}
 
+\section*{Bilan}
 
+\begin{frame}
+\frametitle{Bilan du stage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Remerciements}
+
+\end{frame}
 
 \end{document}
