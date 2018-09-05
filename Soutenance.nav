@@ -41,33 +41,37 @@
 \headcommand {\beamer@framepages {16}{16}}
 \headcommand {\slideentry {3}{0}{4}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {4}{Mod\IeC {\'e}lisation de l'outil}{18}{Mod\IeC {\'e}lisation de l'outil}{0}}
+\headcommand {\sectionentry {4}{Mod\IeC {\'e}lisation}{18}{Mod\IeC {\'e}lisation de l'outil}{0}}
 \headcommand {\beamer@sectionpages {14}{17}}
 \headcommand {\beamer@subsectionpages {14}{17}}
 \headcommand {\slideentry {4}{0}{1}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
 \headcommand {\slideentry {4}{0}{2}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\sectionentry {5}{D\IeC {\'e}veloppement de l'outil}{20}{D\IeC {\'e}veloppement de l'outil}{0}}
-\headcommand {\beamer@sectionpages {18}{19}}
-\headcommand {\beamer@subsectionpages {18}{19}}
-\headcommand {\slideentry {5}{0}{1}{20/20}{}{0}}
+\headcommand {\slideentry {4}{0}{3}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {5}{0}{2}{21/21}{}{0}}
+\headcommand {\slideentry {4}{0}{4}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {5}{0}{3}{22/22}{}{0}}
+\headcommand {\sectionentry {5}{D\IeC {\'e}veloppement}{22}{\IeC {\'E}l\IeC {\'e}ments de D\IeC {\'e}veloppement}{0}}
+\headcommand {\beamer@sectionpages {18}{21}}
+\headcommand {\beamer@subsectionpages {18}{21}}
+\headcommand {\slideentry {5}{0}{1}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {5}{0}{4}{23/23}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\sectionentry {6}{Bilan}{24}{Bilan}{0}}
-\headcommand {\beamer@sectionpages {20}{23}}
-\headcommand {\beamer@subsectionpages {20}{23}}
-\headcommand {\slideentry {6}{0}{1}{24/24}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {6}{0}{2}{25/25}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\beamer@partpages {1}{25}}
-\headcommand {\beamer@subsectionpages {24}{25}}
-\headcommand {\beamer@sectionpages {24}{25}}
-\headcommand {\beamer@documentpages {25}}
-\headcommand {\def \inserttotalframenumber {25}}
+\headcommand {\sectionentry {6}{Bilan}{26}{Bilan}{0}}
+\headcommand {\beamer@sectionpages {22}{25}}
+\headcommand {\beamer@subsectionpages {22}{25}}
+\headcommand {\slideentry {6}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {6}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@partpages {1}{27}}
+\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\beamer@sectionpages {26}{27}}
+\headcommand {\beamer@documentpages {27}}
+\headcommand {\def \inserttotalframenumber {27}}

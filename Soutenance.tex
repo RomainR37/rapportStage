@@ -5,7 +5,7 @@
 
 \usetheme{Frankfurt}
 
-\title{Réalisation d'un outil de cartographie sur le progiciel Amplitude}
+\title{Réalisation d'un outil de cartographie pour le progiciel \textit{Amplitude}}
 \author{Romain ROUSSEAU}
 \institute{Sopra Banking Software}
 \date{\today}
@@ -114,13 +114,11 @@ Progiciel développé en langage Genero 4GL, aujourd'hui en version 11 (appelé 
 \frametitle{Arborescence d'\textit{Amplitude}}
 
 \begin{description}
-	\item[BaseProg] : liste des fichiers \textbf{BaseProg}. Ceux-ci répertorient les modules utilisés pour un programme donnée.
+	\item[BaseProg] : liste des fichiers \textbf{BaseProg}. Ceux-ci répertorient les fichiers sources 4GL utilisés pour un programme donnée.
 	\item[base\_ref] : schéma de référence \textit{Amplitude}, sert principalement à la compilation
 	\item[bin] : liste des sources binaires
-	\item[migration] : liste des scripts permettant de gérer les migrations de serveur
-	\item[src] : répertoires sources 4gl et \textit{per} (les écrans) organisés par module
+	\item[src] : répertoire sources 4gl et \textit{per} (les écrans) organisés par module
 	\item[xcf] : liste des services métiers génériques (SMG) disponibles
-	\item[xsd] : fichiers \textit{xsd} nécessaires au produit.
 \end{description}
 
 \end{frame}
@@ -144,7 +142,6 @@ Demande effectuée par les architectes fonctionnels :
 \frametitle{Expressions des besoins}
 
 \begin{itemize}
-	\item Dictionnaire des flux, interfaces et éditions
 	\item Analyse et alerte sur les impacts développements
 	\item Visualisation de la cartographie
 \end{itemize}
@@ -154,8 +151,14 @@ Demande effectuée par les architectes fonctionnels :
 \begin{frame}
 \frametitle{Déroulement du stage}
 
-Tutoriels et mise à niveau (mois d'Avril)\\
-Modélisation de l'outil (mai jusqu'à début juin)\\
+Tutoriels et mise à niveau (mois d'Avril)
+
+\bigbreak
+
+Modélisation de l'outil (mai jusqu'à début juin)
+
+\bigbreak
+
 Développement (de juin à août)
 
 \end{frame}
@@ -170,59 +173,136 @@ Framework facilitant la création d'application utilisant \textit{Spring} en aut
 \begin{itemize}
 	\item Proposer des solutions rapides et accessibles pour les développements \textit{Spring} ;
 	\item Faciliter les configurations, même lorsque les paramètres souhaités diffèrent de ceux utilisés par défaut ;
-	\item Proposer une panoplie d'options non-fonctionnelles (comme des serveurs embarqués \textit{Tomcat}, des options de sécurité, de mesures de performances, etc.) .
+	\item Proposer une panoplie d'options non-fonctionnelles (comme des serveurs embarqués \textit{Tomcat}, des options de sécurité, de mesures de performances, etc.).
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}
 \frametitle{Spring Data}
+
+Projet auxiliaire de \textit{Spring} permettant de faciliter l'accès aux données.
+
+\bigbreak
+
+Fonctionne avec tout type de base de données, relationnelle ou non.
+
+\begin{block}{Spring Data REST}
+Couche supérieure aux dépôts \textit{Spring Data} permettant d'exposer les données en REST.
+\end{block} 
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Angular}
 
+Framework open-source permettant de réaliser des applications Web.
+
+\bigbreak 
+
+Automatise certains procédés et permet de réaliser des animations complexes en peu de lignes de code.
+
+\bigbreak
+
+De nombreuses bibliothèques de styles existent : \textit{Bootstrap}, \textit{PrimeNG}, ...
+
 \end{frame}
 
-\section{Modélisation de l'outil}
+\section[Modélisation]{Modélisation de l'outil}
 
 \begin{frame}
-\frametitle{}
+\frametitle{Modélisation de l'outil}
 
+Partie back-end (gestion des données, alimentation de la base) avec Spring Boot et Spring Data. 
+
+\bigbreak
+
+Partie front-end (visualisation des données) avec Angular.
+
+\bigbreak
+
+Structure MVVM (Modèle - Vue - Vue/Modèle)
 
 \end{frame}
 
-\section{Développement de l'outil}
+\begin{frame}
+\frametitle{Modélisation de l'outil}
+
+La cartographie sera séparée en deux parties:
+
+\begin{itemize}
+	\item Cartographie fonctionnelle (domaines, fonctions, sous-fonctions, ...) lié à une base de données existante
+	\item Cartographie technique (programmes, fichiers 4GL, ...) géré par notre alimentation et notre propre base de données
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Chiffrage}
+
+Après la réalisation du chiffrage du développement, les temps vont être estimés trop courts pour la finalisation de l'outil.
+
+\bigbreak
+
+L'objectif sera de terminer la partie back-end avant la fin de mon stage.
+
+\end{frame}
+
+\section[Développement]{Éléments de Développement}
 
 \begin{frame}
 \frametitle{Exposition des données en REST}
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Gestion du job}
-
-Quartz
+\begin{center}
+	\includegraphics[width=11cm]{images/restController}
+\end{center}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Gestion du front-end et de la sécurité}
+\frametitle{Gestion du job d'alimentation des données}
 
-oauth2
+Utilisation de \textit{Quartz} pour la gestion du job
+
+\begin{itemize}
+	\item Récupération des outils de développement d'\textit{Amplitude} via SVN
+	\item Récupération des sources \textit{Amplitude}
+	\item Création des programmes en base;
+	\item Création des fichiers 4GL en base;
+	\item Création des fonctions techniques;
+	\item Association des programmes et des fichiers 4GL;
+	\item Extraction du dictionnaire des programmes;
+	\item Fonction de récupération des SMG.
+\end{itemize}
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Aperçu de la page d'accueil}
+
+\begin{center}
+	\includegraphics[width=11cm]{images/cartoAccueil}
+\end{center}
+
+\end{frame}
+
 
 \section*{Bilan}
 
 \begin{frame}
 \frametitle{Bilan du stage}
 
+La partie back-end est presque finalisée, les procédés d'alimentation de la base fonctionnent cependant les temps d'exécution sont trop longs pour le moment. 
+
+\bigbreak
+
+Sur un plan personnel, ce stage m'a permis d'acquérir énormément de compétences techniques.
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Remerciements}
+
+Je tiens à remercier l'entreprise \textit{Sopra Banking Software} pour m'avoir accueilli, mon encadrant M. Alexandre DURAND pour sa confiance tout au long du stage et mes collègues sur place pour leur aide au quotidien.
 
 \end{frame}
 
